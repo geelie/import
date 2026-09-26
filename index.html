@@ -471,6 +471,142 @@
         margin-top: 2px;
       }
 
+      /* ===== PDF / PRINT (A4) ===== */
+      #printArea {
+        display: none;
+      }
+      @media print {
+        body * {
+          visibility: hidden !important;
+        }
+        #printArea,
+        #printArea * {
+          visibility: visible !important;
+        }
+        #printArea {
+          display: block !important;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        @page {
+          size: A4;
+          margin: 9mm;
+        }
+      }
+      .pdoc {
+        font-family: "Inter", Arial, sans-serif;
+        color: #161616;
+        font-size: 9.3px;
+        line-height: 1.32;
+      }
+      .pdoc h1 {
+        font-size: 15px;
+        margin: 0 0 2px;
+        font-weight: 800;
+      }
+      .pdoc .psub {
+        font-size: 8.6px;
+        color: #666;
+      }
+      .pdoc .phead {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid #161616;
+        padding-bottom: 5px;
+        margin-bottom: 7px;
+      }
+      .pdoc .pbadge {
+        display: inline-block;
+        padding: 2px 9px;
+        border-radius: 4px;
+        font-size: 9px;
+        font-weight: 700;
+        background: #eee;
+        white-space: nowrap;
+      }
+      .pdoc .psec {
+        margin-bottom: 6px;
+      }
+      .pdoc .psec-t {
+        font-size: 9px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        background: #f1f1f1;
+        padding: 2px 6px;
+        margin-bottom: 3px;
+      }
+      .pdoc table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1px;
+      }
+      .pdoc table td,
+      .pdoc table th {
+        border: 1px solid #ddd;
+        padding: 1.5px 5px;
+        font-size: 8.8px;
+        vertical-align: top;
+      }
+      .pdoc table th {
+        background: #f7f7f7;
+        text-align: left;
+        font-weight: 700;
+      }
+      .pdoc table td.n,
+      .pdoc table th.n {
+        text-align: right;
+        font-family: var(--mono);
+      }
+      .pdoc .pgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3px 10px;
+        margin-bottom: 2px;
+      }
+      .pdoc .pgrid.c3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pdoc .pi {
+        font-size: 8.8px;
+      }
+      .pdoc .pi b {
+        display: block;
+        color: #777;
+        font-weight: 600;
+        font-size: 7.6px;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+      }
+      .pdoc .p2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+      }
+      .pdoc .pfoot {
+        margin-top: 6px;
+        font-size: 7.6px;
+        color: #999;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding-top: 3px;
+      }
+      .pdoc tr.ptot td {
+        font-weight: 800;
+        background: #eef7ee;
+      }
+      .pdoc .pnote {
+        font-size: 8.4px;
+        color: #444;
+        font-style: italic;
+        margin-bottom: 2px;
+      }
+
       .cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -1920,6 +2056,7 @@
     <div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
       <img id="lightboxImg" src="" />
     </div>
+    <div id="printArea"></div>
     <script>
       /* ===== SUPABASE ===== */
       const SUPABASE_URL = "https://qdadygacsgrujzaoxwdr.supabase.co";
@@ -3000,6 +3137,186 @@
         };
       }
 
+      /* ===== EXPORT PDF (A4) — comandă & ofertă ===== */
+      function fmtD(d) {
+        return d ? new Date(d).toLocaleDateString("ro-RO") : "—";
+      }
+      function pInfo(l, v) {
+        return `<div class="pi"><b>${esc(l)}</b>${v === "" || v == null ? "—" : v}</div>`;
+      }
+      function printOrderPDF(id) {
+        const o = DB.orders.find((x) => x.id === id);
+        if (!o) return;
+        document.getElementById("printArea").innerHTML = buildOrderPrintHTML(o);
+        setTimeout(() => window.print(), 50);
+      }
+      function printOfferPDF(id) {
+        const o = DB.offers.find((x) => x.id === id);
+        if (!o) return;
+        document.getElementById("printArea").innerHTML = buildOfferPrintHTML(o);
+        setTimeout(() => window.print(), 50);
+      }
+      function buildOrderPrintHTML(o) {
+        const c = compute(o);
+        const flowsHtml = DOC_ORDER.map((k) => {
+          const st = flowStats(o, k);
+          return pInfo(
+            DOC_FLOWS[k].titlu,
+            st.have + "/" + st.tot + " documente",
+          );
+        }).join("");
+        const seriiRows = (o.serii || [])
+          .map(
+            (s) =>
+              `<tr><td>${esc(s.model)}</td><td>${esc(s.sasiu)}</td><td>${esc(s.motor)}</td><td>${esc(s.culoare)}</td></tr>`,
+          )
+          .join("");
+        return `<div class="pdoc">
+    <div class="phead"><div><h1>Comandă import · ${esc(o.id)}</h1><div class="psub">Geeli Import ERP · cost real intrare · generat ${fmtD(new Date())}</div></div><span class="pbadge">${esc(o.status)}</span></div>
+
+    <div class="psec"><div class="psec-t">Date generale</div><div class="pgrid">
+      ${pInfo("Furnizor", esc(o.supplier) || "—")}${pInfo("Produs", esc(o.produs) || "—")}${pInfo("Tip asamblare", o.tipAsamblare)}${pInfo("Containere", esc(o.containere) || "—")}
+      ${pInfo("Dată creare", fmtD(o.dataCreare))}${pInfo("Nr. bucăți", o.nrBuc + " buc")}${pInfo("Greutate/buc", (o.greutate || 0) + " kg")}${pInfo("Preț/buc FOB", val(o.pretBuc, o.valutaFOB))}
+      ${pInfo("Curs USD→LEI", o.cursUSD)}${pInfo("Curs EUR→LEI", o.cursEUR)}${pInfo("Cotă vamă", o.cotaVama + "%")}${pInfo("Cotă TVA", o.cotaTVA + "%")}
+    </div></div>
+
+    <div class="psec"><div class="psec-t">Logistică maritimă</div><div class="pgrid">
+      ${pInfo("Partener transport", esc(o.maritim.partener) || "—")}${pInfo("Port FOB", esc(o.maritim.portFOB) || "—")}${pInfo("Spot", esc(o.maritim.spot) || "—")}${pInfo("ETA FOB / ETA POD", fmtD(o.maritim.etaFOB) + " → " + fmtD(o.maritim.etaPOD))}
+    </div></div>
+
+    <div class="p2col">
+      <div class="psec"><div class="psec-t">Plată producător (${o.valutaFOB})</div><table>
+        <tr><td>Avans la comandă</td><td class="n">${val(o.transe.avans, o.valutaFOB)}</td></tr>
+        <tr><td>Rest la încărcare</td><td class="n">${val(o.transe.rest, o.valutaFOB)}</td></tr>
+        <tr><td>Final înainte de vapor</td><td class="n">${val(o.transe.preVapor, o.valutaFOB)}</td></tr>
+        <tr class="ptot"><td>Total plătit</td><td class="n">${val(c.totalTranse, o.valutaFOB)}</td></tr>
+      </table></div>
+      <div class="psec"><div class="psec-t">Costuri logistică & tranzit</div><table>
+        <tr><td>Transport FOB→POD</td><td class="n">${o.log.tFobPodUSD} $</td></tr>
+        <tr><td>Asigurare marfă</td><td class="n">${o.log.asigUSD} $</td></tr>
+        <tr><td>Transport POD→Door</td><td class="n">${o.log.tPodDoorEUR} €</td></tr>
+        <tr><td>Prestații portuare</td><td class="n">${o.log.prestatiiEUR} €</td></tr>
+        <tr><td>Taxe documente</td><td class="n">${o.log.taxeDocEUR} €</td></tr>
+        <tr><td>Tranzit T1</td><td class="n">${o.log.t1EUR} €</td></tr>
+        <tr><td>Comision agent vamal</td><td class="n">${o.log.careiVamaLEI} lei</td></tr>
+        <tr class="ptot"><td>Total logistică</td><td class="n">${lei0(c.logTotal)}</td></tr>
+      </table></div>
+    </div>
+
+    <div class="psec"><div class="psec-t">Cost real intrare — pe bucată / total (${o.nrBuc} buc)</div>
+      <table><thead><tr><th></th><th class="n">Pe bucată</th><th class="n">Total</th></tr></thead><tbody>
+      <tr><td>Valoare marfă (produs, LEI)</td><td class="n">${lei0(c.produsLEI)}</td><td class="n">${lei0(c.produsLEI * o.nrBuc)}</td></tr>
+      <tr><td>Transport & logistică</td><td class="n">${lei0(c.transportBuc)}</td><td class="n">${lei0(c.logTotal)}</td></tr>
+      <tr><td>Taxă vamală (${o.cotaVama}%)</td><td class="n">${lei0(c.taxaVamala)}</td><td class="n">${lei0(c.taxaVamala * o.nrBuc)}</td></tr>
+      <tr><td>TVA vamal (${o.cotaTVA}%)</td><td class="n">${lei0(c.tvaVamal)}</td><td class="n">${lei0(c.tvaTotal)}</td></tr>
+      <tr class="ptot"><td>Cost real net (TVA deductibil)</td><td class="n">${lei0(c.costNet)}</td><td class="n">${lei0(c.costTotalNet)}</td></tr>
+      <tr><td>Preț vânzare B2B (adaos ${o.adaos}%)</td><td class="n">${lei0(c.vanzareB2B)}</td><td class="n">${lei0(c.vanzareTotala)}</td></tr>
+      <tr class="ptot"><td>Marjă</td><td class="n">${lei0(c.marjaBuc)}</td><td class="n">${lei0(c.marjaTotala)}</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="psec"><div class="psec-t">Documentație pe flux</div><div class="pgrid">${flowsHtml}</div></div>
+
+    ${
+      (o.serii || []).length
+        ? `<div class="psec"><div class="psec-t">Serii unități (${o.serii.length})</div>
+      <table><thead><tr><th>Model</th><th>Serie șasiu</th><th>Serie motor</th><th>Culoare</th></tr></thead><tbody>${seriiRows}</tbody></table>
+    </div>`
+        : ""
+    }
+
+    <div class="pfoot">Geeli Import ERP · document generat automat · ${esc(o.id)}</div>
+  </div>`;
+      }
+      function buildOfferPrintHTML(o) {
+        const b = bestPrice(o);
+        const sc = computeScore(o);
+        const specsRows =
+          (o.specs || [])
+            .filter((s) => s.k || s.v)
+            .map((s) => `<tr><td>${esc(s.k)}</td><td>${esc(s.v)}</td></tr>`)
+            .join("") || `<tr><td colspan="2">—</td></tr>`;
+        const preturiRows =
+          (o.preturi || [])
+            .filter((p) => p.palier || p.pret)
+            .map(
+              (p) =>
+                `<tr><td>${esc(p.palier)}</td><td class="n">${p.cantMin || 0}+</td><td class="n">${val(p.pret, p.valuta)}</td><td>${esc(p.obs) || "—"}</td></tr>`,
+            )
+            .join("") || `<tr><td colspan="4">—</td></tr>`;
+        const confRows = (o.conformitati || [])
+          .map((c) => pInfo(c.nume, DOC_ST_LABEL[c.status] || c.status))
+          .join("");
+        const ctcRows = (o.ctc || [])
+          .map(
+            (c) =>
+              `<tr><td>${esc(c.criteriu)}</td><td>${esc(c.rezultat) || "—"}</td><td>${esc(c.obs) || "—"}</td></tr>`,
+          )
+          .join("");
+        const docsRows = (o.docs || [])
+          .map((d) =>
+            pInfo(
+              d.nume,
+              d.primit
+                ? "primit" + (d.data ? " · " + fmtD(d.data) : "")
+                : "lipsă",
+            ),
+          )
+          .join("");
+        const eecFilled = (o.conformEEC || []).filter(
+          (c) => (c.rezultat && c.rezultat !== "—") || c.eec || c.produs,
+        );
+        const eecOk = (o.conformEEC || []).filter(
+          (c) => c.rezultat === "OK",
+        ).length;
+        const eecRows = eecFilled
+          .map(
+            (c) =>
+              `<tr><td>${esc(c.parte)}</td><td>${esc(c.eec) || "—"}</td><td>${esc(c.produs) || "—"}</td><td>${esc(c.rezultat) || "—"}</td></tr>`,
+          )
+          .join("");
+        const evalRows = (o.evaluare || [])
+          .map(
+            (c) =>
+              `<tr><td>${esc(c.criteriu)}</td><td class="n">${c.pondere || 0}</td><td class="n">${c.nota || 0}/5</td></tr>`,
+          )
+          .join("");
+        return `<div class="pdoc">
+    <div class="phead"><div><h1>Ofertă producător · ${esc(o.id)}</h1><div class="psub">Geeli Import ERP · sourcing · generat ${fmtD(new Date())}</div></div><span class="pbadge">${esc(o.status)}</span></div>
+
+    <div class="psec"><div class="psec-t">Date generale</div><div class="pgrid">
+      ${pInfo("Producător", esc(o.producator) || "—")}${pInfo("Produs", esc(o.produs) || "—")}${pInfo("Categorie", esc(o.categorie) || "—")}${pInfo("Tip asamblare", o.tipAsamblare)}
+      ${pInfo("Dată ofertă", fmtD(o.data))}${pInfo("Status mostră", MOSTRA_LBL[o.mostraStatus] || o.mostraStatus)}${pInfo("MOQ", o.moq + " buc")}${pInfo("Capacitate producție", esc(o.capacitate) || "—")}
+      ${pInfo("Timp producție", (o.timpProductieZile || 0) + " zile")}${pInfo("Timp livrare", (o.timpLivrareZile || 0) + " zile")}${pInfo("Preț minim", b ? val(b.pret, b.valuta) : "—")}${pInfo("Comandă asociată", esc(o.orderId) || "—")}
+    </div></div>
+
+    <div class="p2col">
+      <div class="psec"><div class="psec-t">Specificații tehnice</div><table><thead><tr><th>Caracteristică</th><th>Valoare</th></tr></thead><tbody>${specsRows}</tbody></table></div>
+      <div class="psec"><div class="psec-t">Grilă de preț</div><table><thead><tr><th>Palier</th><th class="n">Cant. min</th><th class="n">Preț/buc</th><th>Obs.</th></tr></thead><tbody>${preturiRows}</tbody></table></div>
+    </div>
+
+    <div class="psec"><div class="psec-t">Conformități declarate</div><div class="pgrid">${confRows}</div></div>
+
+    <div class="p2col">
+      <div class="psec"><div class="psec-t">Control tehnic (CTC)</div><table><thead><tr><th>Criteriu</th><th>Rezultat</th><th>Obs.</th></tr></thead><tbody>${ctcRows}</tbody></table></div>
+      <div class="psec"><div class="psec-t">Documente primite</div><div class="pgrid c3">${docsRows}</div>
+        <div class="psec-t" style="margin-top:5px">Plan AQL</div><div class="pgrid c3">${pInfo("Mărime lot", o.aqlLot)}${pInfo("AQL major", o.aqlMajor + "%")}${pInfo("AQL minor", o.aqlMinor + "%")}</div>
+      </div>
+    </div>
+
+    <div class="psec"><div class="psec-t">Conformitate EEC · ${eecOk}/${(o.conformEEC || []).length} verificate OK</div>
+      ${eecRows ? `<table><thead><tr><th>Componentă</th><th>Conform EEC</th><th>Conform produs</th><th>Rezultat</th></tr></thead><tbody>${eecRows}</tbody></table>` : `<div class="pnote">Niciun element verificat încă.</div>`}
+    </div>
+
+    <div class="psec"><div class="psec-t">Evaluare & decizie — scor compozit ${sc.toFixed(1)}/5</div>
+      <table><thead><tr><th>Criteriu</th><th class="n">Pondere</th><th class="n">Notă</th></tr></thead><tbody>${evalRows}</tbody></table>
+      <div class="pnote" style="margin-top:3px"><b>Decizie:</b> ${esc(o.decizie) || "—"}</div>
+    </div>
+
+    <div class="pfoot">Geeli Import ERP · document generat automat · ${esc(o.id)}</div>
+  </div>`;
+      }
+
       /* ===== NAV ===== */
       let state = { view: "dashboard", id: null, search: "", fstatus: "" };
       function setActive() {
@@ -3154,6 +3471,7 @@
         let h = `<div class="form-top"><div class="ft-title">${o.id}</div><span class="ind ${ST_IND[o.status]}">${o.status}</span>
     <div class="ft-actions">
       <button class="btn btn-default btn-sm" onclick="dupOrder('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 8h12v12H8zM4 16V4h12"/></svg>Duplică</button>
+      <button class="btn btn-default btn-sm" onclick="printOrderPDF('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>Generează PDF</button>
       <button class="btn btn-default btn-sm" onclick="delOrder('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M8 6V4h8v2m-2 0v14M10 6v14"/></svg>Șterge</button>
     </div></div>
   <div class="form-layout"><div class="form-main">`;
@@ -3960,6 +4278,7 @@
         let h = `<div class="form-top"><div class="ft-title">${o.id}</div><span class="ind ${OFFER_IND[o.status]}">${o.status}</span>
     <div class="ft-actions">
       ${o.orderId ? `<button class="btn btn-default btn-sm" onclick="openDoc('${o.orderId}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Vezi comanda ${o.orderId}</button>` : `<button class="btn btn-primary btn-sm" onclick="offerToOrder('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Creează comandă import</button>`}
+      <button class="btn btn-default btn-sm" onclick="printOfferPDF('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>Generează PDF</button>
       <button class="btn btn-default btn-sm" onclick="delOffer('${o.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M8 6V4h8v2m-2 0v14M10 6v14"/></svg></button>
     </div></div>
   <div class="form-layout"><div class="form-main">`;
