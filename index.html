@@ -2051,6 +2051,459 @@
         font-style: italic;
         margin-bottom: 2px;
       }
+
+      /* ===== FIȘĂ CONTAINER (PDF profesional A4) ===== */
+      .fdoc {
+        font-family: "Inter", Arial, sans-serif;
+        color: #1d232b;
+        font-size: 8.6pt;
+        line-height: 1.38;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .fdoc .fh {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 14px;
+        align-items: center;
+        padding-bottom: 8px;
+        border-bottom: 2.5px solid #0f6b4f;
+      }
+      .fdoc .fh-logo {
+        height: 34px;
+        max-width: 230px;
+        object-fit: contain;
+      }
+      .fdoc .fh-word {
+        font-size: 20pt;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        color: #0f6b4f;
+        line-height: 1;
+      }
+      .fdoc .fh-co {
+        font-size: 7.6pt;
+        color: #4b5563;
+        line-height: 1.45;
+      }
+      .fdoc .fh-co b {
+        font-size: 9pt;
+        color: #1d232b;
+      }
+      .fdoc .fh-doc {
+        text-align: right;
+        font-size: 7.6pt;
+        color: #4b5563;
+        line-height: 1.5;
+      }
+      .fdoc .fh-doc b {
+        display: block;
+        font-size: 12.5pt;
+        color: #1d232b;
+        letter-spacing: 0.3px;
+      }
+      .fdoc .ftitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 12px 0 10px;
+      }
+      .fdoc .ftitle h1 {
+        font-size: 15pt;
+        margin: 0;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .fdoc .ftitle .nr {
+        font-family: "JetBrains Mono", Consolas, monospace;
+        font-size: 13pt;
+        font-weight: 700;
+        color: #0f6b4f;
+      }
+      .fdoc .fst {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 7.8pt;
+        font-weight: 700;
+        background: #e8f3ee;
+        color: #0f6b4f;
+        border: 1px solid #b9dccb;
+      }
+      .fdoc .fkpi {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        border: 1px solid #d6dbe1;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .fdoc .fkpi div {
+        padding: 6px 9px;
+        border-right: 1px solid #d6dbe1;
+      }
+      .fdoc .fkpi div:last-child {
+        border-right: 0;
+      }
+      .fdoc .fkpi span {
+        display: block;
+        font-size: 6.8pt;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: #6b7280;
+        font-weight: 600;
+      }
+      .fdoc .fkpi b {
+        font-size: 10.5pt;
+        font-family: "JetBrains Mono", Consolas, monospace;
+      }
+      .fdoc .fsec {
+        margin: 0 0 11px;
+        break-inside: auto;
+      }
+      .fdoc .fsec-t {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 8.4pt;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #0f6b4f;
+        border-bottom: 1px solid #0f6b4f;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+        break-after: avoid;
+      }
+      .fdoc .fsec-t i {
+        font-style: normal;
+        display: inline-grid;
+        place-items: center;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #0f6b4f;
+        color: #fff;
+        font-size: 7pt;
+      }
+      .fdoc .fgridp {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4px 14px;
+      }
+      .fdoc .fgridp .k {
+        font-size: 6.8pt;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        color: #6b7280;
+        font-weight: 600;
+      }
+      .fdoc .fgridp .v {
+        font-size: 8.6pt;
+        font-weight: 600;
+      }
+      .fdoc table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .fdoc thead {
+        display: table-header-group;
+      }
+      .fdoc tr {
+        break-inside: avoid;
+      }
+      .fdoc th {
+        background: #f1f4f6;
+        color: #374151;
+        font-size: 7pt;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        text-align: left;
+        font-weight: 700;
+        padding: 4px 6px;
+        border-bottom: 1px solid #cbd2d9;
+      }
+      .fdoc td {
+        padding: 3.5px 6px;
+        border-bottom: 1px solid #e5e8ec;
+        vertical-align: top;
+        font-size: 8.2pt;
+      }
+      .fdoc td.n,
+      .fdoc th.n {
+        text-align: right;
+        white-space: nowrap;
+        font-family: "JetBrains Mono", Consolas, monospace;
+      }
+      .fdoc .mono {
+        font-family: "JetBrains Mono", Consolas, monospace;
+      }
+      .fdoc tr.tot td {
+        font-weight: 800;
+        background: #e8f3ee;
+        border-top: 1.5px solid #0f6b4f;
+      }
+      .fdoc .muted {
+        color: #6b7280;
+      }
+      .fdoc .tag {
+        display: inline-block;
+        padding: 0 5px;
+        border-radius: 3px;
+        font-size: 6.8pt;
+        font-weight: 700;
+        background: #eef0f3;
+        color: #4b5563;
+      }
+      .fdoc .tag.real {
+        background: #e8f3ee;
+        color: #0f6b4f;
+      }
+      .fdoc .tag.est {
+        background: #fdf1e3;
+        color: #9a5a12;
+      }
+      .fdoc .tag.anul {
+        background: #fde8e8;
+        color: #b42318;
+      }
+      .fdoc .fnote {
+        font-size: 7.2pt;
+        color: #6b7280;
+        margin-top: 3px;
+      }
+      .fdoc .fsum {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .fdoc .fsign {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 22px;
+        margin-top: 22px;
+        break-inside: avoid;
+      }
+      .fdoc .fsign div {
+        border-top: 1px solid #9aa3ad;
+        padding-top: 4px;
+        font-size: 7.4pt;
+        color: #4b5563;
+        min-height: 44px;
+      }
+      .fdoc .ffoot {
+        margin-top: 14px;
+        border-top: 1px solid #d6dbe1;
+        padding-top: 4px;
+        font-size: 6.8pt;
+        color: #8a929c;
+        display: flex;
+        justify-content: space-between;
+      }
+      @media print {
+        html,
+        body {
+          background: #fff !important;
+        }
+        @page fisa {
+          size: A4;
+          margin: 12mm 11mm 14mm 11mm;
+          @bottom-right {
+            content: "Pagina " counter(page) " din " counter(pages);
+            font-size: 7pt;
+            color: #8a929c;
+            font-family: Arial, sans-serif;
+          }
+        }
+        .fdoc {
+          page: fisa;
+        }
+      }
+
+      /* ===== STATISTICI ===== */
+      .st-kpis {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .st-kpi {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px 12px;
+      }
+      .st-kpi span {
+        display: block;
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+      .st-kpi b {
+        display: block;
+        font-size: 18px;
+        font-family: var(--mono);
+        margin-top: 2px;
+      }
+      .st-kpi i {
+        font-style: normal;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .st-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin-bottom: 14px;
+        break-inside: avoid;
+      }
+      .st-h {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+      }
+      .st-h h3 {
+        font-size: 14px;
+        font-weight: 800;
+        margin: 0;
+        flex: 1;
+      }
+      .st-h .st-sub {
+        font-size: 11.5px;
+        color: var(--muted);
+        width: 100%;
+        margin-top: -4px;
+      }
+      .st-tbl {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      .st-tbl th {
+        text-align: left;
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        color: var(--muted);
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--border-2);
+        background: var(--gray-soft);
+      }
+      .st-tbl td {
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--border);
+      }
+      .st-tbl .n {
+        text-align: right;
+        font-family: var(--mono);
+        white-space: nowrap;
+      }
+      .st-tbl tr.tot td {
+        font-weight: 800;
+        border-top: 1.5px solid var(--border-2);
+      }
+      .st-scroll {
+        overflow-x: auto;
+      }
+      .st-filters {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-bottom: 14px;
+      }
+      .st-filters .f {
+        margin: 0;
+        min-width: 130px;
+      }
+      .st-chips {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .st-chips button {
+        padding: 5px 10px;
+        border-radius: 14px;
+        border: 1px solid var(--border-2);
+        font-size: 12px;
+        font-weight: 600;
+        background: var(--card);
+      }
+      .st-chips button.on {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .st-leg {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 11.5px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+      .st-leg i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        margin-right: 5px;
+        vertical-align: -1px;
+      }
+      .st-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .st-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      @media (max-width: 900px) {
+        .st-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .fdoc .st-card {
+        border: 0;
+        padding: 0;
+        margin: 0 0 12px;
+        background: none;
+      }
+      .fdoc .st-h h3 {
+        font-size: 9.5pt;
+        color: #0f6b4f;
+        border-bottom: 1px solid #0f6b4f;
+        padding-bottom: 2px;
+      }
+      .fdoc .st-kpis {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+      .fdoc .st-kpi {
+        padding: 5px 8px;
+        border-color: #d6dbe1;
+      }
+      .fdoc .st-kpi b {
+        font-size: 10pt;
+      }
+      .fdoc .st-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .fdoc .st-tbl th,
+      .fdoc .st-tbl td {
+        font-size: 7.4pt;
+        padding: 2.5px 5px;
+      }
+      .fdoc .st-noprint {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -2144,6 +2597,11 @@
                 d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
               /></svg
             >Utilizatori
+          </button>
+          <button class="sb-item" data-nav="stats" onclick="go('stats')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 3v18h18M7 15l4-4 3 3 6-7" /></svg
+            >Statistici
           </button>
         </div>
         <div class="sb-foot">
@@ -2390,61 +2848,312 @@
         db.settings = s.settings || { garantie: 0 };
         if (s.v) db.v = s.v;
         else delete db.v;
+        db._sv = +s._v || 0;
         return db;
       }
       function missingTables() {
         return Object.keys(_loadOk).filter((t) => !_loadOk[t]);
       }
-      let _saveT = null;
+      /* ===== SALVARE PE RÂNDURI, CU VERIFICARE DE VERSIUNE (multi-utilizator) =====
+   - se trimit doar rândurile modificate de acest utilizator (comparate cu ultima versiune încărcată/salvată);
+   - se șterg doar rândurile pe care acest utilizator le-a șters — niciodată rânduri adăugate de alții;
+   - fiecare rând are în data: _v (versiune), _by (cine), _at (când); actualizarea reușește doar dacă
+     versiunea de pe server e aceeași pe care a pornit-o utilizatorul — altfel e conflict și se reîncarcă rândul;
+   - orice eroare Supabase e afișată și modificarea rămâne în așteptare (se reîncearcă automat). */
+      const _base = {}; // tabel -> Map(id -> JSON ultima versiune cunoscută de pe server)
+      let _saveT = null,
+        _saving = false,
+        _again = false,
+        _suspendSave = false,
+        _dirty = false,
+        _retryT = null;
+      function setBaseline() {
+        Object.keys(TABLES).forEach((k) => {
+          _base[TABLES[k]] = new Map(
+            (DB[k] || []).map((r) => [r.id, JSON.stringify(r)]),
+          );
+        });
+        _base[SETTINGS_TABLE] = new Map([
+          ["global", JSON.stringify(settingsRow())],
+        ]);
+      }
+      function settingsRow() {
+        return { settings: DB.settings || {}, v: DB.v, _v: DB._sv || 0 };
+      }
+      function userTag() {
+        return (
+          (currentProfile && currentProfile.nume) ||
+          (currentUser && currentUser.email) ||
+          "?"
+        );
+      }
       function save() {
         invalidateCalc();
+        if (_suspendSave) return;
+        _dirty = true;
         clearTimeout(_saveT);
         _saveT = setTimeout(persistDB, 350);
       }
-      async function syncTable(table, rows) {
-        if (_loadOk[table] === false) return; // nu suprascriem un tabel care n-a putut fi citit
-        const ids = rows.map((r) => r.id);
-        try {
-          if (rows.length)
-            await sb
-              .from(table)
-              .upsert(rows.map((r) => ({ id: r.id, data: r })));
-          if (ids.length)
-            await sb
-              .from(table)
-              .delete()
-              .not(
-                "id",
-                "in",
-                "(" +
-                  ids
-                    .map((id) => `"${String(id).replace(/"/g, "")}"`)
-                    .join(",") +
-                  ")",
-              );
-          else await sb.from(table).delete().neq("id", "");
-        } catch (e) {
-          toast("Eroare la salvare online — verifică conexiunea", true);
+      async function pool(items, n, fn) {
+        let i = 0;
+        const run = async () => {
+          while (i < items.length) {
+            const it = items[i++];
+            await fn(it);
+          }
+        };
+        await Promise.all(
+          Array.from({ length: Math.min(n, items.length) }, run),
+        );
+      }
+      async function writeRow(table, r, prev) {
+        // prev = JSON-ul ultimei versiuni cunoscute (null = rând nou)
+        const oldV = prev ? +JSON.parse(prev)._v || 0 : null;
+        const snap = JSON.parse(JSON.stringify(r)); // ce se trimite acum (editările făcute în timpul salvării rămân „nesalvate”)
+        const nv = Object.assign(snap, {
+          _v: (oldV || 0) + 1,
+          _by: userTag(),
+          _at: new Date().toISOString(),
+        });
+        let res;
+        if (prev == null)
+          res = await sb.from(table).insert({ id: r.id, data: nv });
+        else if (!oldV)
+          res = await sb
+            .from(table)
+            .update({ data: nv })
+            .eq("id", r.id)
+            .is("data->_v", null)
+            .select("id");
+        else
+          res = await sb
+            .from(table)
+            .update({ data: nv })
+            .eq("id", r.id)
+            .eq("data->>_v", String(oldV))
+            .select("id");
+        if (res.error) {
+          if (prev == null && res.error.code === "23505")
+            return { conflict: true };
+          return { error: res.error.message || "eroare" };
         }
+        if (prev != null && (!res.data || !res.data.length))
+          return { conflict: true };
+        r._v = nv._v;
+        r._by = nv._by;
+        r._at = nv._at;
+        return { ok: true, saved: JSON.stringify(nv) };
       }
       async function persistDB() {
-        const jobs = Object.keys(TABLES).map((k) =>
-          syncTable(TABLES[k], DB[k] || []),
-        );
-        if (_loadOk[SETTINGS_TABLE] !== false)
-          jobs.push(
-            sb
-              .from(SETTINGS_TABLE)
-              .upsert({
-                id: "global",
-                data: { settings: DB.settings || {}, v: DB.v },
-              })
-              .then((r) => {
-                if (r.error) toast("Eroare la salvarea setărilor", true);
-              }),
+        if (_saving) {
+          _again = true;
+          return;
+        }
+        _saving = true;
+        clearTimeout(_retryT);
+        const conflicts = [],
+          errors = [];
+        try {
+          for (const k of Object.keys(TABLES)) {
+            const table = TABLES[k];
+            if (_loadOk[table] === false) continue; // nu scriem într-un tabel care n-a putut fi citit
+            const base = _base[table] || (_base[table] = new Map());
+            const rows = DB[k] || [];
+            const cur = new Map(rows.map((r) => [r.id, r]));
+            const changed = rows.filter(
+              (r) => base.get(r.id) !== JSON.stringify(r),
+            );
+            await pool(changed, 6, async (r) => {
+              const res = await writeRow(
+                table,
+                r,
+                base.has(r.id) ? base.get(r.id) : null,
+              );
+              if (res.ok) base.set(r.id, res.saved);
+              else if (res.conflict) conflicts.push({ k, table, id: r.id });
+              else errors.push(`${table} / ${r.id}: ${res.error}`);
+            });
+            const gone = [...base.keys()].filter((id) => !cur.has(id));
+            await pool(gone, 6, async (id) => {
+              const res = await sb.from(table).delete().eq("id", id);
+              if (res.error)
+                errors.push(`${table} / ștergere ${id}: ${res.error.message}`);
+              else base.delete(id);
+            });
+          }
+          if (_loadOk[SETTINGS_TABLE] !== false) {
+            const sb0 =
+              _base[SETTINGS_TABLE] || (_base[SETTINGS_TABLE] = new Map());
+            const cur = settingsRow();
+            if (sb0.get("global") !== JSON.stringify(cur)) {
+              const oldV = +DB._sv || 0;
+              const data = {
+                settings: DB.settings || {},
+                v: DB.v,
+                _v: oldV + 1,
+                _by: userTag(),
+                _at: new Date().toISOString(),
+              };
+              let res;
+              if (!sb0.has("global") || sb0.get("global") == null)
+                res = await sb
+                  .from(SETTINGS_TABLE)
+                  .upsert({ id: "global", data });
+              else if (!oldV)
+                res = await sb
+                  .from(SETTINGS_TABLE)
+                  .update({ data })
+                  .eq("id", "global")
+                  .is("data->_v", null)
+                  .select("id");
+              else
+                res = await sb
+                  .from(SETTINGS_TABLE)
+                  .update({ data })
+                  .eq("id", "global")
+                  .eq("data->>_v", String(oldV))
+                  .select("id");
+              if (res.error) errors.push("setări: " + res.error.message);
+              else if (res.data && !res.data.length) {
+                // rândul „global” nu exista încă pe server → îl creăm
+                const r2 = oldV
+                  ? null
+                  : await sb
+                      .from(SETTINGS_TABLE)
+                      .upsert({ id: "global", data });
+                if (oldV)
+                  conflicts.push({
+                    k: "settings",
+                    table: SETTINGS_TABLE,
+                    id: "global",
+                  });
+                else if (r2 && r2.error)
+                  errors.push("setări: " + r2.error.message);
+                else {
+                  DB._sv = data._v;
+                  sb0.set("global", JSON.stringify(settingsRow()));
+                }
+              } else {
+                DB._sv = data._v;
+                sb0.set("global", JSON.stringify(settingsRow()));
+              }
+            }
+          }
+          if (conflicts.length) await resolveConflicts(conflicts);
+        } catch (e) {
+          errors.push(e && e.message ? e.message : "conexiune întreruptă");
+        } finally {
+          _saving = false;
+        }
+        if (errors.length) {
+          saveBanner(
+            `Salvare eșuată — modificările rămân în așteptare și se reîncearcă automat. Detalii: ${errors.slice(0, 3).join(" · ")}${errors.length > 3 ? ` (+${errors.length - 3})` : ""}`,
           );
-        await Promise.all(jobs);
+          _dirty = true;
+          _retryT = setTimeout(persistDB, 10000);
+        } else {
+          saveBanner("");
+          _dirty = _again;
+        }
+        if (_again) {
+          _again = false;
+          persistDB();
+        }
       }
+      async function resolveConflicts(list) {
+        const msgs = [];
+        for (const c of list) {
+          if (c.k === "settings") {
+            const { data } = await sb
+              .from(SETTINGS_TABLE)
+              .select("id,data")
+              .eq("id", "global")
+              .maybeSingle();
+            const d = (data && data.data) || {};
+            DB.settings = d.settings || { garantie: 0 };
+            DB._sv = +d._v || 0;
+            _base[SETTINGS_TABLE].set("global", JSON.stringify(settingsRow()));
+            msgs.push(
+              `Setările (garanție, metode de plată) au fost modificate de ${d._by || "alt utilizator"}${d._at ? " la " + new Date(d._at).toLocaleString("ro-RO") : ""}`,
+            );
+            continue;
+          }
+          const { data, error } = await sb
+            .from(c.table)
+            .select("id,data")
+            .eq("id", c.id)
+            .maybeSingle();
+          if (error) continue;
+          const arr = DB[c.k];
+          const i = arr.findIndex((r) => r.id === c.id);
+          if (data) {
+            const srv = { ...data.data, id: data.id };
+            if (i >= 0) arr[i] = srv;
+            else arr.push(srv);
+            _base[c.table].set(c.id, JSON.stringify(srv));
+            msgs.push(
+              `${c.id} a fost modificat de ${srv._by || "alt utilizator"}${srv._at ? " la " + new Date(srv._at).toLocaleString("ro-RO") : ""}`,
+            );
+          } else {
+            if (i >= 0) arr.splice(i, 1);
+            _base[c.table].delete(c.id);
+            msgs.push(`${c.id} a fost șters de alt utilizator`);
+          }
+        }
+        invalidateCalc();
+        try {
+          render();
+        } catch (e) {}
+        openModal(
+          "Modificare simultană",
+          `<div class="res-note warn"><span>Altcineva a salvat între timp aceleași înregistrări. Am încărcat versiunea lor; <b>modificarea ta la aceste înregistrări nu s-a salvat</b> — verific-o și refă-o dacă e cazul.</span></div><ul style="margin:12px 0 0 18px;font-size:13px;line-height:1.7">${msgs.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>`,
+          `<button class="btn btn-primary" onclick="closeModal()">Am înțeles</button>`,
+        );
+      }
+      function saveBanner(msg) {
+        let el = document.getElementById("saveBanner");
+        if (!msg) {
+          if (el) el.remove();
+          return;
+        }
+        if (!el) {
+          el = document.createElement("div");
+          el.id = "saveBanner";
+          el.style.cssText =
+            "position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9999;max-width:min(92vw,760px);background:var(--red);color:#fff;padding:12px 16px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 6px 24px rgba(0,0,0,.25)";
+          document.body.appendChild(el);
+        }
+        el.textContent = msg;
+      }
+      window.addEventListener("beforeunload", (e) => {
+        if (_dirty || _saving) {
+          e.preventDefault();
+          e.returnValue = "";
+        }
+      });
+      // la revenirea în fereastră, dacă nu ai nimic nesalvat, aduce modificările colegilor
+      let _lastSync = Date.now();
+      document.addEventListener("visibilitychange", async () => {
+        if (document.visibilityState !== "visible" || !currentProfile || !DB)
+          return;
+        if (_dirty || _saving || Date.now() - _lastSync < 30000) return;
+        if (document.getElementById("overlay").classList.contains("open"))
+          return;
+        if (
+          document.activeElement &&
+          /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)
+        )
+          return;
+        const fresh = await load();
+        if (missingTables().length || _dirty || _saving) return;
+        DB = fresh;
+        setBaseline();
+        _lastSync = Date.now();
+        invalidateCalc();
+        try {
+          render();
+        } catch (e) {}
+      });
 
       /* ===== STOCARE FIȘIERE (Supabase Storage, bucket "geeli-import-fisiere") ===== */
       function fileUrl(id) {
@@ -2518,11 +3227,26 @@
       async function nextId(prefix, withYear) {
         const year = new Date().getFullYear();
         const key = withYear ? prefix + "-" + year : prefix;
-        const { data, error } = await sb.rpc("next_counter", { p_key: key });
-        const n = error ? Date.now() % 1000 : data;
-        return withYear
-          ? prefix + "-" + year + "-" + String(n).padStart(3, "0")
-          : prefix + "-" + String(n).padStart(3, "0");
+        const exists = (id) =>
+          DB.orders.some((x) => x.id === id) ||
+          DB.offers.some((x) => x.id === id) ||
+          DB.suppliers.some((x) => x.id === id);
+        for (let k = 0; k < 50; k++) {
+          const { data, error } = await sb.rpc("next_counter", { p_key: key });
+          if (error || !(+data > 0)) {
+            toast(
+              "Nu am putut obține un număr nou de la server — verifică conexiunea și reîncearcă",
+              true,
+            );
+            throw new Error("next_counter indisponibil");
+          }
+          const id = withYear
+            ? prefix + "-" + year + "-" + String(data).padStart(3, "0")
+            : prefix + "-" + String(data).padStart(3, "0");
+          if (!exists(id)) return id; // contorul era în urma unor numere deja folosite → trece mai departe
+        }
+        toast("Nu am găsit un număr liber — contactează administratorul", true);
+        throw new Error("next_counter epuizat");
       }
 
       const STATUSES = [
@@ -4012,9 +4736,11 @@
               : a;
           }, 0);
           O.totalTranse =
-            (+(o.transe || {}).avans || 0) +
-            (+(o.transe || {}).rest || 0) +
-            (+(o.transe || {}).preVapor || 0);
+            o.metodaPlata && Array.isArray(o.metodaPlata.termene)
+              ? (O.valoareFOB * mpPct(o.metodaPlata)) / 100
+              : (+(o.transe || {}).avans || 0) +
+                (+(o.transe || {}).rest || 0) +
+                (+(o.transe || {}).preVapor || 0);
           Object.assign(O, {
             produsLEI: avg("produsLEI"),
             transportBuc: nrBuc ? O.M.reduce((a, m) => a + m.tr, 0) / nrBuc : 0,
@@ -4108,9 +4834,19 @@
 
     <div class="p2col">
       <div class="psec"><div class="psec-t">Plată producător (${o.valutaFOB})</div><table>
-        <tr><td>Avans la comandă</td><td class="n">${val(o.transe.avans, o.valutaFOB)}</td></tr>
+        ${
+          o.metodaPlata && Array.isArray(o.metodaPlata.termene)
+            ? `<tr><td colspan="2"><b>${esc(o.metodaPlata.nume || "Metodă de plată")}</b></td></tr>` +
+              o.metodaPlata.termene
+                .map(
+                  (x) =>
+                    `<tr><td>${+x.pct || 0}% · ${esc(x.moment || "")}${+x.zile ? " + " + +x.zile + " zile" : ""}${x.nota ? " · " + esc(x.nota) : ""}</td><td class="n">${val(((+x.pct || 0) * (c.valoareFOB || 0)) / 100, o.valutaFOB)}</td></tr>`,
+                )
+                .join("")
+            : `<tr><td>Avans la comandă</td><td class="n">${val(o.transe.avans, o.valutaFOB)}</td></tr>
         <tr><td>Rest la încărcare</td><td class="n">${val(o.transe.rest, o.valutaFOB)}</td></tr>
-        <tr><td>Final înainte de vapor</td><td class="n">${val(o.transe.preVapor, o.valutaFOB)}</td></tr>
+        <tr><td>Final înainte de vapor</td><td class="n">${val(o.transe.preVapor, o.valutaFOB)}</td></tr>`
+        }
         <tr class="ptot"><td>Total planificat</td><td class="n">${val(c.totalTranse, o.valutaFOB)}</td></tr>
         <tr><td>Plăți în registru (${plRows.length})</td><td class="n">${lei0(c.platitLei || 0)}</td></tr>
       </table></div>
@@ -4312,6 +5048,7 @@
           warehouse: vWarehouse,
           dvi: vDvi,
           users: vUsers,
+          stats: vStats,
         })[state.view]();
       }
 
@@ -4503,10 +5240,7 @@
   </div></div></div>`;
 
         // 5. PLATĂ FOB 3 TRANȘE
-        h += `<div class="section"><div class="section-h"><span class="sh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 12V8H6a2 2 0 010-4h12v4M4 6v12a2 2 0 002 2h14v-4M18 12a2 2 0 00-2 2 2 2 0 002 2h4v-4z"/></svg></span>Plată producător — plan tranșe <span class="sh-note">planificat · plățile efective se trec în registrul de plăți</span></div><div class="section-b"><div class="fgrid">
-    ${F("Avans la comandă", "transe.avans", "number", o.valutaFOB)}
-    ${F("Rest la încărcare", "transe.rest", "number", o.valutaFOB)}
-    ${F("Înainte de încărcare pe vapor", "transe.preVapor", "number", o.valutaFOB, "c2")}
+        h += `<div class="section"><div class="section-h"><span class="sh-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 12V8H6a2 2 0 010-4h12v4M4 6v12a2 2 0 002 2h14v-4M18 12a2 2 0 00-2 2 2 2 0 002 2h4v-4z"/></svg></span>Plată producător — metoda de plată <span class="sh-note">planificat · plățile efective se trec în registrul de plăți</span></div><div class="section-b"><div id="mpBox"></div><div class="fgrid" style="margin-top:12px">
     <div class="f c2"><label>Total tranșe</label><input class="calc inp-r" id="c_transeTotal" readonly></div>
     <div class="f c2"><label>Valoare marfă (verificare)</label><input class="calc inp-r" id="c_valMarfa2" readonly></div>
   </div></div></div>`;
@@ -4599,6 +5333,7 @@
         refreshModels();
         refreshPlati();
         refreshSerii();
+        refreshMetodaPlata();
         recalc();
         refreshDocs();
       }
@@ -4607,6 +5342,238 @@
       function getPath(o, p) {
         return p.split(".").reduce((a, k) => a?.[k], o);
       }
+      /* ===== METODE DE PLATĂ (editor + alegere pe comandă) =====
+   Metodele se definesc o dată (setări comune) și se aleg pe fiecare comandă.
+   Comanda păstrează o copie a termenelor la momentul alegerii, ca o modificare ulterioară
+   a metodei să nu schimbe singură comenzile vechi. „Manual” = cele 3 sume de până acum.
+   Planul e informativ: costul se calculează în continuare doar din plățile reale / estimări. */
+      const MOMENTE_PLATA = [
+        "La comandă (avans)",
+        "Înainte de producție",
+        "La încărcare",
+        "Înainte de expediere / vapor",
+        "La primirea B/L",
+        "La sosirea în port",
+        "De la data facturii",
+        "Altul",
+      ];
+      function metode() {
+        DB.settings = DB.settings || {};
+        if (!Array.isArray(DB.settings.metodePlata))
+          DB.settings.metodePlata = [];
+        return DB.settings.metodePlata;
+      }
+      const mpOf = (id) => metode().find((m) => m.id === id);
+      const mpPct = (m) =>
+        ((m && m.termene) || []).reduce((a, x) => a + (+x.pct || 0), 0);
+      const mpSnap = (m) =>
+        JSON.parse(
+          JSON.stringify({ id: m.id, nume: m.nume, termene: m.termene || [] }),
+        );
+      const mpSame = (a, b) =>
+        !!a &&
+        !!b &&
+        JSON.stringify([a.nume, a.termene]) ===
+          JSON.stringify([b.nume, b.termene]);
+      function mpMomentTxt(x) {
+        const z = +x.zile || 0;
+        return (
+          escH(x.moment || "—") +
+          (z ? ` + ${z} zile` : "") +
+          (x.nota
+            ? ` <span style="color:var(--muted)">· ${escH(x.nota)}</span>`
+            : "")
+        );
+      }
+      function refreshMetodaPlata() {
+        const box = document.getElementById("mpBox");
+        if (!box) return;
+        const o = cur();
+        const sel = o.metodaPlata;
+        const act = metode().filter((m) => m.activ !== false);
+        const opts =
+          `<option value="" ${!sel ? "selected" : ""}>Manual — avans / rest / vapor (sume)</option>` +
+          act
+            .map(
+              (m) =>
+                `<option value="${escH(m.id)}" ${sel && sel.id === m.id ? "selected" : ""}>${escH(m.nume || "(fără nume)")}</option>`,
+            )
+            .join("") +
+          (sel && !act.some((m) => m.id === sel.id)
+            ? `<option value="${escH(sel.id)}" selected>${escH(sel.nume || "(fără nume)")} (inactivă / ștearsă)</option>`
+            : "");
+        let h = `<div style="display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap">
+      <div class="f" style="flex:1;min-width:240px;margin:0"><label>Metoda de plată</label><select onchange="mpAlege(this.value)">${opts}</select></div>
+      <button class="btn btn-default btn-sm" onclick="mpEditor()">Editează metodele de plată</button></div>`;
+        if (!sel) {
+          const fld = (lbl, k) =>
+            `<div class="f"><label>${lbl}<span class="u">${escH(o.valutaFOB)}</span></label><input type="number" step="any" class="inp-r" value="${(o.transe || {})[k] ?? ""}" oninput="setPath('transe.${k}',this.valueAsNumber)"></div>`;
+          h += `<div class="fgrid" style="margin-top:12px">${fld("Avans la comandă", "avans")}${fld("Rest la încărcare", "rest")}${fld("Înainte de încărcare pe vapor", "preVapor")}</div>`;
+        } else {
+          const O = computeAll().orders[o.id];
+          const vf = O ? O.valoareFOB : 0;
+          const pct = mpPct(sel);
+          h += `<table class="grid-tbl" style="margin-top:12px"><thead><tr><th style="width:70px;text-align:right">%</th><th>Când se plătește</th><th style="text-align:right">Sumă (${escH(o.valutaFOB)})</th></tr></thead><tbody>${
+            (sel.termene || [])
+              .map(
+                (x) =>
+                  `<tr><td style="padding:8px 10px;text-align:right;font-family:var(--mono)">${+x.pct || 0}%</td><td style="padding:8px 10px">${mpMomentTxt(x)}</td><td class="mpAmt" data-pct="${+x.pct || 0}" style="padding:8px 10px;text-align:right;font-family:var(--mono)">${val(((+x.pct || 0) * vf) / 100, o.valutaFOB)}</td></tr>`,
+              )
+              .join("") ||
+            `<tr><td colspan="3" style="padding:10px;color:var(--muted)">Metoda nu are termene.</td></tr>`
+          }</tbody></table>`;
+          const w = [];
+          if (Math.abs(pct - 100) > 0.001)
+            w.push(`Termenele metodei însumează ${pct}%, nu 100%.`);
+          if (!vf)
+            w.push(
+              "Valoarea mărfii e 0 — completează modelele ca să vezi sumele.",
+            );
+          h += warnList(w);
+          const m = mpOf(sel.id);
+          if (m && !mpSame(m, sel))
+            h += `<div class="res-note warn" style="margin-top:8px"><span>Metoda „${escH(m.nume)}” a fost modificată în editor după ce ai ales-o pe această comandă. Comanda păstrează termenele vechi.</span><button class="btn btn-default btn-sm" onclick="mpAlege('${escH(m.id)}')">Aplică versiunea nouă</button></div>`;
+        }
+        box.innerHTML = h;
+      }
+      function mpUpdateAmounts() {
+        const o = cur();
+        if (!o || !o.metodaPlata) return;
+        const O = computeAll().orders[o.id];
+        const vf = O ? O.valoareFOB : 0;
+        document.querySelectorAll("#mpBox .mpAmt").forEach((td) => {
+          td.textContent = val((+td.dataset.pct * vf) / 100, o.valutaFOB);
+        });
+      }
+      function mpAlege(id) {
+        const o = cur();
+        if (!id) o.metodaPlata = null;
+        else {
+          const m = mpOf(id);
+          if (m) o.metodaPlata = mpSnap(m);
+          else if (o.metodaPlata && o.metodaPlata.id === id) return; // inactivă/ștearsă: rămâne copia
+        }
+        save();
+        refreshMetodaPlata();
+        recalc();
+      }
+      function mpEditor() {
+        openModal(
+          "Metode de plată",
+          `<div id="mpEd"></div>`,
+          `<button class="btn btn-default" onclick="mpAdd()">${ICON.plus}Metodă nouă</button><button class="btn btn-primary" onclick="closeModal();mpAfterEdit()">Gata</button>`,
+        );
+        mpEdRender();
+      }
+      function mpAfterEdit() {
+        if (state.view === "order") refreshMetodaPlata();
+      }
+      function mpEdRender() {
+        const el = document.getElementById("mpEd");
+        if (!el) return;
+        const L = metode();
+        const used = (id) =>
+          DB.orders.filter((o) => o.metodaPlata && o.metodaPlata.id === id)
+            .length;
+        el.innerHTML =
+          L.map((m, i) => {
+            const pct = mpPct(m);
+            return `<div style="border:1px solid var(--border-2);border-radius:10px;padding:12px;margin-bottom:12px;${m.activ === false ? "opacity:.6" : ""}">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <input value="${escH(m.nume || "")}" placeholder="Nume metodă, ex. 30% avans / 70% înainte de expediere" oninput="mpSet(${i},'nume',this.value)" style="flex:1;min-width:220px;padding:8px 10px;border:1px solid var(--border-2);border-radius:8px;font-weight:600">
+        <label style="display:flex;gap:6px;align-items:center;font-size:12.5px"><input type="checkbox" ${m.activ !== false ? "checked" : ""} onchange="mpSet(${i},'activ',this.checked);mpEdRender()">Activă</label>
+        <button class="btn btn-default btn-sm" onclick="mpDel(${i})">Șterge</button>
+      </div>
+      <div style="font-size:11.5px;color:var(--muted);margin:6px 0 8px">${used(m.id) ? `Folosită pe ${used(m.id)} comenzi · ` : ""}Total: <b id="mpPct_${i}" style="color:${Math.abs(pct - 100) > 0.001 ? "#B4651A" : "var(--green)"}">${pct}%</b></div>
+      <table class="grid-tbl"><thead><tr><th style="width:80px;text-align:right">%</th><th>Moment</th><th style="width:90px;text-align:right">+ zile</th><th>Observații</th><th class="rm"></th></tr></thead><tbody>${(
+        m.termene || []
+      )
+        .map(
+          (
+            x,
+            j,
+          ) => `<tr><td style="padding:0"><input type="number" step="any" min="0" value="${x.pct ?? ""}" oninput="mpTSet(${i},${j},'pct',this.valueAsNumber)" style="width:100%;border:none;background:transparent;padding:8px 10px;text-align:right;font-family:var(--mono)"></td>
+          <td style="padding:0"><select onchange="mpTSet(${i},${j},'moment',this.value)" style="width:100%;border:none;background:transparent;padding:8px">${MOMENTE_PLATA.map((v) => `<option ${x.moment === v ? "selected" : ""}>${v}</option>`).join("")}</select></td>
+          <td style="padding:0"><input type="number" step="1" min="0" value="${x.zile || ""}" placeholder="0" oninput="mpTSet(${i},${j},'zile',this.valueAsNumber)" style="width:100%;border:none;background:transparent;padding:8px 10px;text-align:right;font-family:var(--mono)"></td>
+          <td><input value="${escH(x.nota || "")}" placeholder="—" oninput="mpTSet(${i},${j},'nota',this.value)"></td>
+          <td class="rm"><button class="grid-rm" onclick="mpTRm(${i},${j})">${ICON.x}</button></td></tr>`,
+        )
+        .join("")}</tbody></table>
+      <button class="grid-add" onclick="mpTAdd(${i})">${ICON.plus}Adaugă termen</button></div>`;
+          }).join("") ||
+          `<div style="padding:16px;text-align:center;color:var(--muted);border:1px dashed var(--border-2);border-radius:8px">Nicio metodă definită. Apasă „Metodă nouă”. Exemple: „30% avans la comandă, 70% înainte de expediere”, „100% la 60 de zile de la data facturii”.</div>`;
+      }
+      function mpAdd() {
+        metode().push({
+          id: uid("MP"),
+          nume: "",
+          activ: true,
+          termene: [{ pct: 100, moment: MOMENTE_PLATA[0], zile: 0, nota: "" }],
+        });
+        save();
+        mpEdRender();
+      }
+      function mpSet(i, k, v) {
+        const m = metode()[i];
+        if (!m) return;
+        m[k] = v;
+        save();
+      }
+      function mpTSet(i, j, k, v) {
+        const m = metode()[i];
+        if (!m || !m.termene[j]) return;
+        if (k === "pct" || k === "zile")
+          v = Number.isNaN(v) ? 0 : Math.max(0, v);
+        m.termene[j][k] = v;
+        save();
+        if (k === "pct") {
+          const el = document.getElementById("mpPct_" + i);
+          if (el) {
+            const pct = mpPct(m);
+            el.textContent = pct + "%";
+            el.style.color =
+              Math.abs(pct - 100) > 0.001 ? "#B4651A" : "var(--green)";
+          }
+        }
+      }
+      function mpTAdd(i) {
+        const m = metode()[i];
+        m.termene = m.termene || [];
+        m.termene.push({
+          pct: Math.max(0, 100 - mpPct(m)),
+          moment: MOMENTE_PLATA[0],
+          zile: 0,
+          nota: "",
+        });
+        save();
+        mpEdRender();
+      }
+      function mpTRm(i, j) {
+        metode()[i].termene.splice(j, 1);
+        save();
+        mpEdRender();
+      }
+      function mpDel(i) {
+        const m = metode()[i];
+        const n = DB.orders.filter(
+          (o) => o.metodaPlata && o.metodaPlata.id === m.id,
+        ).length;
+        if (n) {
+          if (
+            !confirm(
+              `Metoda „${m.nume || "(fără nume)"}” e folosită pe ${n} comenzi.\nO dezactivez (nu mai apare la alegere, comenzile își păstrează termenele)?`,
+            )
+          )
+            return;
+          m.activ = false;
+        } else {
+          if (!confirm(`Ștergi metoda „${m.nume || "(fără nume)"}”?`)) return;
+          metode().splice(i, 1);
+        }
+        save();
+        mpEdRender();
+      }
+
       function setPath(p, v) {
         const o = cur();
         const ks = p.split(".");
@@ -5118,6 +6085,7 @@
             })
             .join("") ||
           `<div style="padding:16px;text-align:center;color:var(--muted-2);font-weight:500;border:1px dashed var(--border-2);border-radius:8px">Nicio plată înregistrată — costul folosește estimările. Adaugă plățile din extrasele de bancă.</div>`;
+        refreshCopyBar();
         renderPlatiCalc();
       }
       function platF(i, k, v) {
@@ -5173,6 +6141,188 @@
         save();
         refreshPlati();
         afterPayChange();
+      }
+      /* ===== COPIERE PLĂȚI ÎNTRE CONTAINERE DIN ACELAȘI SPOT (opțional, pornit de utilizator) =====
+   Spotul containerului = spotul comenzilor din conținutul lui (Comandă → Logistică maritimă → Spot).
+   Lipirea creează plăți noi, independente (modificarea uneia nu le schimbă pe celelalte).
+   Plățile identice deja existente la destinație (tip, valută, sumă, document, dată) nu se dublează. */
+      let payClip = null;
+      const spotNorm = (s) =>
+        String(s || "")
+          .trim()
+          .toLowerCase();
+      function contSpots(c) {
+        const s = new Set();
+        (c && c.lines ? c.lines : []).forEach((l) => {
+          const o = ordOf(l.orderId);
+          const v = o && o.maritim ? spotNorm(o.maritim.spot) : "";
+          if (v) s.add(v);
+        });
+        return [...s];
+      }
+      function spotLabel(c) {
+        const s = new Set();
+        (c && c.lines ? c.lines : []).forEach((l) => {
+          const o = ordOf(l.orderId);
+          const v = o && o.maritim ? String(o.maritim.spot || "").trim() : "";
+          if (v) s.add(v);
+        });
+        return [...s].join(", ");
+      }
+      function sameSpotConts(c) {
+        const sp = contSpots(c);
+        if (!sp.length) return [];
+        return DB.containers.filter(
+          (x) => x.id !== c.id && contSpots(x).some((v) => sp.includes(v)),
+        );
+      }
+      function contPayIdx(cid) {
+        return DB.plati
+          .map((p, i) => i)
+          .filter(
+            (i) => DB.plati[i].contId === cid && DB.plati[i].tip !== "furnizor",
+          );
+      }
+      function payTipLbl(k) {
+        const x = PAY_TYPES.find((t) => t.k === k);
+        return x ? x.lbl : k;
+      }
+      function refreshCopyBar() {
+        const bar = document.getElementById("plCopyBar");
+        if (!bar || state.view !== "container") return;
+        const c = curCont();
+        if (!c) return (bar.innerHTML = "");
+        let h = "";
+        if (contPayIdx(c.id).length)
+          h += `<button class="btn btn-default btn-sm" onclick="payCopyModal()">Copiază detaliile de plată</button>`;
+        if (payClip && payClip.from !== c.id) {
+          const ok = contSpots(c).some((v) => payClip.spots.includes(v));
+          h += ok
+            ? `<button class="btn btn-primary btn-sm" onclick="payPasteHere()">Lipește detaliile de plată (${payClip.items.length} de la ${escH(payClip.fromLbl)})</button>`
+            : `<span style="font-size:12px;color:var(--muted);align-self:center">Plățile copiate de la ${escH(payClip.fromLbl)} se pot lipi doar la containere din același spot.</span>`;
+        }
+        bar.innerHTML = h;
+      }
+      function payCopyModal() {
+        const c = curCont();
+        const idx = contPayIdx(c.id);
+        const sp = contSpots(c);
+        const T = sameSpotConts(c);
+        const items = idx
+          .map((i) => {
+            const p = DB.plati[i];
+            return `<label style="display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)"><input type="checkbox" class="pcItem" value="${escH(p.id)}" checked>
+          <span style="flex:1"><b>${escH(payTipLbl(p.tip))}</b> · ${escH(p.doc || "fără document")} · ${p.data ? ro(p.data) : "fără dată"}</span>
+          <span style="font-family:var(--mono)">${val(+p.suma || 0, p.valuta === "LEI" ? "RON" : p.valuta)}</span></label>`;
+          })
+          .join("");
+        const targets = !sp.length
+          ? `<div class="res-note warn"><span>Comanda acestui container nu are completat <b>Spot</b> (Comandă → Logistică maritimă). Fără spot nu pot găsi containerele din același spot.</span></div>`
+          : T.length
+            ? `<label style="display:flex;gap:8px;align-items:center;padding:6px 0;font-weight:700"><input type="checkbox" id="pcAll" onchange="document.querySelectorAll('.pcT').forEach(x=>x.checked=this.checked)">Toate containerele din spot (${T.length})</label>` +
+              T.map((x) => {
+                const n = contPayIdx(x.id).length;
+                return `<label style="display:flex;gap:8px;align-items:center;padding:5px 0 5px 22px"><input type="checkbox" class="pcT" value="${escH(x.id)}"><span style="font-family:var(--mono);font-weight:600">${escH(contLabel(x))}</span><span style="color:var(--muted);font-size:12px">${escH(contSummary(x))}${n ? ` · are deja ${n} plăți` : ""}</span></label>`;
+              }).join("")
+            : `<div style="color:var(--muted);padding:6px 0">Nu există alte containere în spotul „${escH(spotLabel(c))}”.</div>`;
+        openModal(
+          "Copiază detaliile de plată — " + escH(contLabel(c)),
+          `<div style="font-size:12.5px;color:var(--muted);margin-bottom:8px">Alege plățile de copiat. Se lipesc ca plăți noi, independente: le poți modifica apoi separat la fiecare container.</div>
+        <div style="margin-bottom:16px">${items}</div>
+        <div style="font-weight:700;margin-bottom:4px">Unde le lipești ${sp.length ? `<span style="font-weight:500;color:var(--muted)">· spot „${escH(spotLabel(c))}”</span>` : ""}</div>${targets}`,
+          `<button class="btn btn-default" onclick="payCopyOnly()">Doar copiază</button><button class="btn btn-primary" onclick="payPasteSelected()" ${T.length ? "" : "disabled"}>Lipește la selectate</button>`,
+        );
+      }
+      function payClipFromModal() {
+        const c = curCont();
+        const ids = [...document.querySelectorAll(".pcItem:checked")].map(
+          (x) => x.value,
+        );
+        if (!ids.length) {
+          toast("Alege cel puțin o plată", true);
+          return null;
+        }
+        payClip = {
+          from: c.id,
+          fromLbl: contLabel(c),
+          spots: contSpots(c),
+          items: DB.plati
+            .filter((p) => ids.includes(p.id))
+            .map((p) => JSON.parse(JSON.stringify(p))),
+        };
+        return payClip;
+      }
+      function payCopyOnly() {
+        if (!payClipFromModal()) return;
+        closeModal();
+        refreshCopyBar();
+        toast(
+          `${payClip.items.length} plăți copiate — deschide alt container din același spot și apasă „Lipește”`,
+        );
+      }
+      function payPasteSelected() {
+        const tg = [...document.querySelectorAll(".pcT:checked")].map(
+          (x) => x.value,
+        );
+        if (!tg.length) return toast("Alege cel puțin un container", true);
+        if (!payClipFromModal()) return;
+        const r = payPaste(tg);
+        closeModal();
+        refreshPlati();
+        afterPayChange();
+        toast(
+          `${r.added} plăți lipite la ${r.conts} containere${r.skipped ? ` · ${r.skipped} existau deja și n-au fost dublate` : ""}`,
+        );
+      }
+      function payPasteHere() {
+        const c = curCont();
+        if (!payClip || !contSpots(c).some((v) => payClip.spots.includes(v)))
+          return;
+        const r = payPaste([c.id]);
+        refreshPlati();
+        afterPayChange();
+        toast(
+          `${r.added} plăți lipite${r.skipped ? ` · ${r.skipped} existau deja și n-au fost dublate` : ""}`,
+        );
+      }
+      function payPaste(targetIds) {
+        let added = 0,
+          skipped = 0;
+        const touched = new Set();
+        const key = (p) =>
+          [
+            p.tip,
+            p.valuta,
+            +p.suma || 0,
+            String(p.doc || "").trim(),
+            p.data || "",
+          ].join("|");
+        targetIds.forEach((cid) => {
+          const tc = contOf(cid);
+          if (!tc || cid === payClip.from) return;
+          if (!contSpots(tc).some((v) => payClip.spots.includes(v))) return; // doar același spot
+          const have = new Set(
+            DB.plati.filter((p) => p.contId === cid).map(key),
+          );
+          const tOrders = new Set((tc.lines || []).map((l) => l.orderId));
+          payClip.items.forEach((it) => {
+            if (have.has(key(it))) {
+              skipped++;
+              return;
+            }
+            const np = JSON.parse(JSON.stringify(it));
+            np.id = uid("P");
+            np.contId = cid;
+            np.orderId =
+              it.orderId && tOrders.has(it.orderId) ? it.orderId : "";
+            DB.plati.push(np);
+            have.add(key(np));
+            added++;
+            touched.add(cid);
+          });
+        });
+        if (added) save();
+        return { added, skipped, conts: touched.size };
       }
       function rmPlata(i) {
         DB.plati.splice(i, 1);
@@ -5549,7 +6699,7 @@
         const C = computeAll().conts[c.id];
         const fld = (lbl, k, type = "text", unit = "", cls = "") =>
           `<div class="f ${cls}"><label>${lbl}${unit ? `<span class="u">${unit}</span>` : ""}</label><input type="${type}" ${type === "number" ? 'step="any" class="inp-r"' : ""} value="${escH(c[k] ?? "")}" oninput="contSet('${k}',${type === "number" ? "this.valueAsNumber" : "this.value"})"></div>`;
-        let h = `<div class="form-top"><div class="ft-title" style="font-family:var(--mono)">${escH(contLabel(c))}</div><span id="cStPill">${stPill(C.status)}</span><div class="ft-actions"><button class="btn btn-default btn-sm" onclick="delCont('${c.id}')">Șterge</button></div></div>
+        let h = `<div class="form-top"><div class="ft-title" style="font-family:var(--mono)">${escH(contLabel(c))}</div><span id="cStPill">${stPill(C.status)}</span><div class="ft-actions"><button class="btn btn-default btn-sm" onclick="printContainerPDF('${c.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6z"/></svg>Fișă container (PDF)</button><button class="btn btn-default btn-sm" onclick="antetEditor()">Antet documente</button><button class="btn btn-default btn-sm" onclick="delCont('${c.id}')">Șterge</button></div></div>
   <div class="form-layout"><div class="form-main">`;
         h += `<div class="section"><div class="section-h"><span class="sh-ic">${ICON.cont}</span>Date container</div><div class="section-b"><div class="fgrid">
     <div class="f"><label>Nr. container <span class="u" id="cIso">${isoBadge(c.nr)}</span></label><input value="${escH(c.nr)}" style="font-family:var(--mono);text-transform:uppercase" oninput="contSet('nr',this.value.toUpperCase());document.getElementById('cIso').innerHTML=isoBadge(this.value)"></div>
@@ -5571,7 +6721,7 @@
   </div></div>`;
         h += `<div class="section"><div class="section-h"><span class="sh-ic">${ICON.truck}</span>Costuri container <span class="sh-note">estimare din comanda principală · înlocuită de plăți</span></div><div class="section-b"><div id="cCosts"></div></div></div>`;
         h += `<div class="section"><div class="section-h"><span class="sh-ic">${ICON.card}</span>Plăți container <span class="sh-note">navlu, transport, port, stocare — curs real din extras</span></div><div class="section-b">
-    <div id="plRows"></div><button class="grid-add" onclick="addPlata()">${ICON.plus}Adaugă plată</button><div id="plWarn"></div></div></div>`;
+    <div id="plRows"></div><button class="grid-add" onclick="addPlata()">${ICON.plus}Adaugă plată</button><div id="plCopyBar" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div><div id="plWarn"></div></div></div>`;
         h += `<div class="section"><div class="section-h"><span class="sh-ic">${ICON.shield}</span>Scoateri / DVI</div><div class="section-b"><div id="cDvi"></div><button class="grid-add" onclick="openDvi(newDvi(['${c.id}']).id)">${ICON.plus}DVI nou pentru acest container</button></div></div>`;
         h += `</div><div class="form-side" id="cSide"></div></div>`;
         document.getElementById("wrap").innerHTML = h;
@@ -6073,7 +7223,7 @@
             (t, i) => {
               const f = from;
               from = (+t.pana || 0) + 1;
-              return `<tr><td style="padding:8px 10px;font-family:var(--mono)">${f}</td><td style="padding:0"><input type="number" step="1" min="0" value="${t.pana ?? ""}" placeholder="în continuare" oninput="ddTierSet('${g}',${i},'pana',this.value===''?'':this.valueAsNumber)" onchange="refreshDD()" style="font-family:var(--mono)"></td><td style="padding:0"><input type="number" step="any" min="0" value="${t.tarif || ""}" placeholder="0 = liber" oninput="ddTierSet('${g}',${i},'tarif',this.valueAsNumber)" style="text-align:right;font-family:var(--mono)"></td><td class="rm">${T.length > 1 ? `<button class="grid-rm" title="Șterge treapta" onclick="ddTierRm('${g}',${i})">${ICON.x}</button>` : ""}</td></tr>`;
+              return `<tr><td class="ddFrom" data-g="${g}" data-i="${i}" style="padding:8px 10px;font-family:var(--mono)">${f}</td><td style="padding:0"><input type="number" step="1" min="0" value="${t.pana ?? ""}" placeholder="în continuare" oninput="ddTierSet('${g}',${i},'pana',this.value===''?'':this.valueAsNumber);ddFromUpdate()" style="font-family:var(--mono)"></td><td style="padding:0"><input type="number" step="any" min="0" value="${t.tarif || ""}" placeholder="0 = liber" oninput="ddTierSet('${g}',${i},'tarif',this.valueAsNumber)" style="text-align:right;font-family:var(--mono)"></td><td class="rm">${T.length > 1 ? `<button class="grid-rm" title="Șterge treapta" onclick="ddTierRm('${g}',${i})">${ICON.x}</button>` : ""}</td></tr>`;
             },
           ).join(
             "",
@@ -6113,6 +7263,20 @@
         t[k] = v;
         save();
         refreshContCalc();
+      }
+      function ddFromUpdate() {
+        const c = curCont();
+        if (!c || !c.dd) return;
+        ["tA", "tB"].forEach((g) => {
+          let from = 1;
+          (c.dd[g] || []).forEach((t, i) => {
+            const td = document.querySelector(
+              `.ddFrom[data-g="${g}"][data-i="${i}"]`,
+            );
+            if (td) td.textContent = from;
+            from = (+t.pana || 0) + 1;
+          });
+        });
       }
       function ddTierAdd(g) {
         const d = ddOf(curCont());
@@ -7190,6 +8354,7 @@
 
       /* ===== RECALC FIȘĂ COMANDĂ ===== */
       function recalc() {
+        if (state.view === "order") mpUpdateAmounts();
         const o = cur();
         if (!o) return;
         const R = computeAll();
@@ -8075,7 +9240,18 @@
       function priceF(i, k, v) {
         curOffer().preturi[i][k] = v;
         save();
-        if (k === "pret") refreshPrices();
+        // nu reconstruim rândurile la fiecare tastă (pierdea focusul după prima cifră);
+        // actualizăm doar evidențierea celui mai bun preț
+        if (k === "pret" || k === "valuta") markBestPrice();
+      }
+      function markBestPrice() {
+        const o = curOffer();
+        const b = bestPrice(o);
+        document
+          .querySelectorAll("#priceRows tr")
+          .forEach((tr, j) =>
+            tr.classList.toggle("price-best", !!b && o.preturi[j] === b),
+          );
       }
       function addPrice() {
         curOffer().preturi.push({
@@ -8216,6 +9392,10 @@
               `<tr><td><input value="${(c.criteriu || "").replace(/"/g, "&quot;")}" oninput="evalF(${i},'criteriu',this.value)"></td><td style="padding:0"><input type="number" value="${c.pondere || ""}" oninput="evalF(${i},'pondere',+this.value)" style="width:100%;border:none;background:transparent;padding:8px 10px;text-align:right;font-family:var(--mono)"></td><td style="padding:0"><select onchange="evalF(${i},'nota',+this.value)" style="width:100%;border:none;background:transparent;padding:8px;text-align:right;font-weight:600">${[0, 1, 2, 3, 4, 5].map((n) => `<option value="${n}" ${(+c.nota || 0) === n ? "selected" : ""}>${n || "—"}</option>`).join("")}</select></td><td class="calc" style="padding:8px 10px;text-align:right;font-family:var(--mono);font-weight:600;color:var(--muted)">${((+c.nota || 0) * (+c.pondere || 0)).toFixed(0)}</td><td class="rm"><button class="grid-rm" onclick="rmEval(${i})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></td></tr>`,
           )
           .join("");
+        refreshEvalSummary();
+      }
+      function refreshEvalSummary() {
+        const o = curOffer();
         const wsum = o.evaluare.reduce((s, c) => s + (+c.pondere || 0), 0);
         const we = document.getElementById("wsum");
         if (we)
@@ -8228,7 +9408,9 @@
       function evalF(i, k, v) {
         curOffer().evaluare[i][k] = v;
         save();
-        refreshEval();
+        // câmpurile text/număr nu se reconstruiesc la fiecare tastă (își pierdeau focusul)
+        if (k === "nota") refreshEval();
+        else refreshEvalSummary();
       }
       function addEval() {
         curOffer().evaluare.push({ criteriu: "", pondere: 0, nota: 0 });
@@ -8587,6 +9769,1388 @@
         openDoc(oid);
       }
 
+      /* ===== ANTET DOCUMENTE (date firmă + siglă, în setări comune) ===== */
+      const ANTET_DEF = {
+        firma: "GEELI GENERATION ELECTRIC SRL",
+        cui: "",
+        regcom: "",
+        adresa: "Calea Armatei Române nr. 96B, Carei, jud. Satu Mare, 445100",
+        telefon: "",
+        email: "",
+        web: "www.geeli.ro",
+        logo: "",
+      };
+      // sigla Geeli implicită (furnizată de Geeli); se poate înlocui din „Antet documente”
+      const GEELI_LOGO =
+        "data:image/png;base64,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";
+      const antetLogoSrc = (a) =>
+        a.logo === "none" ? "" : a.logo || GEELI_LOGO;
+      function antet() {
+        DB.settings = DB.settings || {};
+        if (!DB.settings.antet) DB.settings.antet = { ...ANTET_DEF };
+        return DB.settings.antet;
+      }
+      function antetEditor() {
+        const a = antet();
+        const f = (k, lbl, ph = "") =>
+          `<div class="f"><label>${lbl}</label><input value="${escH(a[k] || "")}" placeholder="${escH(ph)}" oninput="antet()['${k}']=this.value;save()"></div>`;
+        openModal(
+          "Antet documente",
+          `<div style="font-size:12.5px;color:var(--muted);margin-bottom:10px">Apar în antetul fișelor generate. Verifică datele cu cele din certificatul de înregistrare.</div>
+        <div class="fgrid" style="grid-template-columns:1fr 1fr">${f("firma", "Denumire firmă")}${f("cui", "CUI", "ex. RO12345678")}${f("regcom", "Nr. Reg. Comerțului", "ex. J30/…/…")}${f("telefon", "Telefon")}${f("email", "Email")}${f("web", "Web")}<div class="f c2"><label>Adresă sediu</label><input value="${escH(a.adresa || "")}" oninput="antet().adresa=this.value;save()"></div></div>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap"><div id="antLogo" style="min-width:150px;min-height:50px;border:1px dashed var(--border-2);border-radius:8px;display:grid;place-items:center;padding:6px">${antetLogoSrc(a) ? `<img src="${antetLogoSrc(a)}" style="max-height:40px;max-width:220px">` : '<span style="font-size:11.5px;color:var(--muted)">fără siglă</span>'}</div>
+        <label class="btn btn-default btn-sm" style="cursor:pointer">Încarcă sigla (PNG/JPG, max 300 KB)<input type="file" accept="image/png,image/jpeg,image/svg+xml" style="display:none" onchange="antetLogo(this.files[0])"></label>
+        ${antetLogoSrc(a) ? `<button class="btn btn-default btn-sm" onclick="antet().logo='none';save();antetEditor()">Scoate sigla</button>` : ""}${a.logo && a.logo !== "none" ? `<button class="btn btn-default btn-sm" onclick="antet().logo='';save();antetEditor()">Revino la sigla Geeli</button>` : ""}</div>`,
+          `<button class="btn btn-primary" onclick="closeModal()">Gata</button>`,
+        );
+      }
+      function antetLogo(file) {
+        if (!file) return;
+        if (file.size > 300 * 1024)
+          return toast("Sigla e prea mare (max 300 KB)", true);
+        const r = new FileReader();
+        r.onload = (e) => {
+          antet().logo = e.target.result;
+          save();
+          antetEditor();
+        };
+        r.readAsDataURL(file);
+      }
+
+      /* ===== FIȘĂ CONTAINER — de la încărcare până la scoaterea din antrepozit (PDF A4) ===== */
+      function printContainerPDF(id) {
+        const c = contOf(id);
+        if (!c) return;
+        document.getElementById("printArea").innerHTML =
+          buildContainerPrintHTML(c);
+        const old = document.title;
+        document.title = `Fisa container ${(c.nr || "").replace(/[^A-Za-z0-9]/g, "")} ${ddToday()}`;
+        const back = () => {
+          document.title = old;
+          window.removeEventListener("afterprint", back);
+        };
+        window.addEventListener("afterprint", back);
+        const imgs = [...document.querySelectorAll("#printArea img")];
+        Promise.all(
+          imgs.map((im) =>
+            im.complete ? 1 : new Promise((r) => (im.onload = im.onerror = r)),
+          ),
+        ).then(() => setTimeout(() => window.print(), 60));
+      }
+      function buildContainerPrintHTML(c) {
+        const R = computeAll();
+        const C = R.conts[c.id];
+        const a = antet();
+        const P0 = C && C.principal ? C.principal.o : null;
+        const now = new Date();
+        const docNr = `FC-${(c.nr || "X").replace(/[^A-Za-z0-9]/g, "")}-${ddToday().replace(/-/g, "")}`;
+        const cell = (k, v) =>
+          `<div><div class="k">${k}</div><div class="v">${v === "" || v == null ? "—" : v}</div></div>`;
+        const sec = (n, titlu, body) =>
+          `<div class="fsec"><div class="fsec-t"><i>${n}</i>${titlu}</div>${body}</div>`;
+        const iso = iso6346(c.nr);
+        const orders = [...new Set((c.lines || []).map((l) => l.orderId))]
+          .map(ordOf)
+          .filter(Boolean);
+        let n = 0;
+        const prevLbl = (pv) => {
+          if (!pv) return "—";
+          if (pv.startsWith("op:")) {
+            const o2 = (c.ops || []).find((x) => x.id === pv.slice(3));
+            return o2
+              ? o2.mrn || ((OP_TIP[o2.tip] || {}).lbl || o2.tip) + " (fără MRN)"
+              : "—";
+          }
+          if (pv.startsWith("dvi:")) {
+            const d2 = dviOf(pv.slice(4));
+            return d2 ? d2.nr || "DVI (fără MRN)" : "—";
+          }
+          return pv;
+        };
+        // 1. identificare
+        const ident = `<div class="fgridp">
+      ${cell("Număr container", `<span class="mono">${esc(c.nr || "—")}</span> ${iso.st === "ok" ? '<span class="tag real">ISO 6346 valid</span>' : iso.st === "bad" ? `<span class="tag anul">ISO: ${esc(iso.err)}</span>` : ""}`)}
+      ${cell("Tip", esc(c.tip))}${cell("Volum B/L", c.cbmBL ? (+c.cbmBL).toLocaleString("ro-RO") + " m³" : "")}${cell("Greutate B/L", c.kgBL ? (+c.kgBL).toLocaleString("ro-RO") + " kg" : "")}
+      ${cell("Sosit în port", c.sosit ? "Da" : "Nu — în tranzit")}${cell("Data descărcare", c.descarcare ? fmtD(c.descarcare) : "")}${cell("Factură navlu", esc(c.navlu))}${cell("Factură rutier", esc(c.rutier))}
+      ${orders.map((o) => cell("Comandă " + esc(o.id), `${esc(o.supplier || "—")}<br><span class="muted">spot ${esc((o.maritim || {}).spot || "—")} · ${esc((o.maritim || {}).partener || "—")} · ${esc((o.maritim || {}).portFOB || "—")} → POD ${fmtD((o.maritim || {}).etaPOD)}</span>`)).join("")}
+      ${c.nota ? cell("Notă", esc(c.nota)) : ""}</div>`;
+        // 2. conținut
+        const lines = (C ? C.lines : []).map((L) => {
+          const o = ordOf(L.l.orderId),
+            m = modelOf(o, L.l.modelId);
+          return `<tr><td class="mono">${esc(L.l.orderId)}</td><td>${esc(m ? m.model : "?")}${m && m.tip === "piese" ? ' <span class="tag">piese</span>' : ""}</td><td class="n">${L.buc}</td><td class="n">${L.cbm ? L.cbm.toFixed(2) : L.cbmRest ? L.cbmRest.toFixed(2) + "*" : "—"}</td><td class="n">${L.kg ? Math.round(L.kg).toLocaleString("ro-RO") : "—"}</td><td class="n">${lei0(L.val)}</td><td class="n">${L.share != null ? pct1(L.share) : "—"}</td><td class="n">${L.rel || 0}</td><td class="n">${L.buc - (L.rel || 0)}</td></tr>`;
+        });
+        const T = (k) =>
+          C ? C.lines.reduce((s, L) => s + (+L[k] || 0), 0) : 0;
+        const cont = lines.length
+          ? `<table><thead><tr><th>Comandă</th><th>Model</th><th class="n">Buc.</th><th class="n">m³</th><th class="n">kg</th><th class="n">Valoare</th><th class="n">Spațiu</th><th class="n">Scoase</th><th class="n">Rămase</th></tr></thead><tbody>${lines.join("")}
+        <tr class="tot"><td colspan="2">Total container</td><td class="n">${T("buc")}</td><td class="n"></td><td class="n">${Math.round(T("kg")).toLocaleString("ro-RO")}</td><td class="n">${lei0(T("val"))}</td><td class="n">100%</td><td class="n">${T("rel")}</td><td class="n">${T("buc") - T("rel")}</td></tr></tbody></table>
+        <div class="fnote">Împărțire: ${esc(C.method || "—")}${c.locked ? " · împărțire blocată" : ""}${(C.lines || []).some((L) => !L.cbm && L.cbmRest) ? " · * volum rămas din B/L" : ""}</div>`
+          : '<div class="muted">Container fără conținut.</div>';
+        // 3. istoric MRN
+        const ops = (c.ops || []).map((op) => {
+          const tip = (OP_TIP[op.tip] || {}).lbl || op.tip;
+          const acop =
+            op.acop === "partial"
+              ? (op.items || []).reduce((s, it) => s + (+it.buc || 0), 0) +
+                " buc"
+              : "toată marfa";
+          return `<tr${op.anulat ? ' style="color:#9aa3ad"' : ""}><td>${op.data ? fmtD(op.data) : "—"}</td><td>${esc(tip)}${op.anulat ? ` <span class="tag anul">ANULAT${op.motiv ? ": " + esc(op.motiv) : ""}</span>` : ""}</td><td class="mono">${esc(op.mrn || "—")}</td><td class="mono">${esc(prevLbl(op.prev))}</td><td>${acop}</td><td class="n">${+op.infoTir ? lei(+op.infoTir) : "—"}</td><td>${esc(op.docPlata || "")}</td></tr>`;
+        });
+        const dvis = (DB.dvi || []).filter((d) =>
+          (d.art || []).some((x) =>
+            (x.src || []).some((s) => s.contId === c.id),
+          ),
+        );
+        dvis.forEach((d) =>
+          ops.push(
+            `<tr><td>${d.data ? fmtD(d.data) : "—"}</td><td>DVI — punere în liberă circulație</td><td class="mono">${esc(d.nr || "—")}</td><td class="muted">—</td><td>${(d.art || []).reduce((s, x) => s + (x.src || []).filter((q) => q.contId === c.id).reduce((u, q) => u + (+q.buc || 0), 0), 0)} buc</td><td class="n">${(d.infoTir || {})[c.id] ? lei(+(d.infoTir || {})[c.id]) : "—"}</td><td></td></tr>`,
+          ),
+        );
+        const mrn = ops.length
+          ? `<table><thead><tr><th>Data</th><th>Operațiune</th><th>MRN</th><th>Provine din</th><th>Acoperire</th><th class="n">Info TIR (cu TVA)</th><th>Doc. plată</th></tr></thead><tbody>${ops.join("")}</tbody></table>`
+          : '<div class="muted">Nicio declarație înregistrată.</div>';
+        // 4. free time & D&D
+        const dd = ddCalc(c, P0);
+        const ddH =
+          !dd.ok || !ddActive(c)
+            ? `<div class="muted">${c.descarcare ? "Fără tarife D&D introduse." : "Fără dată de descărcare."}</div>`
+            : `<table><thead><tr><th>Perioadă</th><th>De la</th><th>Până la</th><th class="n">Zile</th><th class="n">Zile libere</th><th>Ultima zi liberă</th><th class="n">Cost (${esc(dd.d.moneda)})</th></tr></thead><tbody>${dd.parts
+                .map((q) =>
+                  q.pending || q.future
+                    ? `<tr><td>${esc(q.lbl)}</td><td colspan="2" class="muted">neînceput</td><td class="n">—</td><td class="n">${q.free === Infinity ? "—" : q.free}</td><td>—</td><td class="n">—</td></tr>`
+                    : `<tr><td>${esc(q.lbl)}</td><td>${fmtD(q.startS)}</td><td>${q.closed ? fmtD(q.endS) : q.planned ? fmtD(q.endS) + " (planificat)" : "azi (neîncheiat)"}</td><td class="n">${q.n}</td><td class="n">${q.free === Infinity ? "—" : q.free}</td><td>${q.lastFree != null ? fmtD(dStr(q.lastFree)) : "—"}</td><td class="n">${q.cost.toLocaleString("ro-RO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td></tr>`,
+                )
+                .join(
+                  "",
+                )}<tr class="tot"><td colspan="6">Total D&D estimat${dd.d.moneda !== "LEI" ? ` (curs ${dd.rate ? dd.rate.toFixed(4) : "—"})` : ""}</td><td class="n">${lei(dd.totalLei)}</td></tr></tbody></table>`;
+        // 5. plăți
+        const pl = (DB.plati || [])
+          .filter((x) => x.contId === c.id)
+          .sort((x, y) =>
+            String(x.data || "").localeCompare(String(y.data || "")),
+          );
+        let plTot = 0;
+        const plH = pl.length
+          ? `<table><thead><tr><th>Data</th><th>Tip</th><th>Document</th><th class="n">Sumă</th><th class="n">Curs</th><th class="n">LEI</th><th>Sursă</th></tr></thead><tbody>${pl
+              .map((x) => {
+                const r = R.pay[x.id] || {};
+                plTot += +r.lei || 0;
+                const curs =
+                  x.valuta === "LEI"
+                    ? "—"
+                    : +x.lei && +x.suma
+                      ? (x.lei / x.suma).toFixed(4)
+                      : +x.cursBNR
+                        ? (+x.cursBNR).toFixed(4)
+                        : "—";
+                return `<tr><td>${x.data ? fmtD(x.data) : "—"}</td><td>${esc(payTipLbl(x.tip))}</td><td>${esc(x.doc || "—")}</td><td class="n">${val(+x.suma || 0, x.valuta === "LEI" ? "RON" : x.valuta)}</td><td class="n">${curs}</td><td class="n">${lei(+r.lei || 0)}</td><td><span class="tag ${r.src === "estimat" ? "est" : "real"}">${esc(r.src || "")}</span></td></tr>`;
+              })
+              .join(
+                "",
+              )}<tr class="tot"><td colspan="5">Total plăți container</td><td class="n">${lei(plTot)}</td><td></td></tr></tbody></table>`
+          : '<div class="muted">Nicio plată înregistrată pe container.</div>';
+        // 6. costuri logistice
+        const cats = LOG_CATS.filter((k) => C && (C.cat[k.k] || C.catEst[k.k]));
+        const costH = cats.length
+          ? `<table><thead><tr><th>Categorie</th><th class="n">Estimare</th><th class="n">Folosit în cost</th><th>Sursă</th></tr></thead><tbody>${cats
+              .map(
+                (k) =>
+                  `<tr><td>${esc(k.lbl)}</td><td class="n muted">${C.catEst[k.k] ? lei(C.catEst[k.k]) : "—"}</td><td class="n">${lei(C.cat[k.k] || 0)}</td><td><span class="tag ${C.catReal[k.k] ? "real" : "est"}">${C.catReal[k.k] ? "plăți reale" : "estimare"}</span></td></tr>`,
+              )
+              .join(
+                "",
+              )}${C.opsNet ? `<tr><td>Operațiuni vamale — Info TIR fără TVA</td><td class="n muted">—</td><td class="n">${lei(C.opsNet)}</td><td><span class="tag real">declarații</span></td></tr>` : ""}<tr class="tot"><td colspan="2">Total logistică container</td><td class="n">${lei((C.total || 0) + (C.opsNet || 0))}</td><td></td></tr></tbody></table>`
+          : '<div class="muted">Fără costuri.</div>';
+        // 7. scoateri DVI (taxele articolului repartizate proporțional pe bucățile din acest container)
+        let dT = { buc: 0, taxa: 0, tva: 0 };
+        const dviRows = [];
+        dvis.forEach((d) =>
+          (d.art || []).forEach((x) => {
+            const nb = (x.src || [])
+              .filter((s) => s.contId === c.id)
+              .reduce((u, s) => u + (+s.buc || 0), 0);
+            if (!nb) return;
+            const f = +x.buc ? nb / +x.buc : 0;
+            const m = modelOf(ordOf(x.orderId), x.modelId);
+            const tx = (+x.taxa || 0) * f,
+              tv = (+x.tva || 0) * f;
+            dT.buc += nb;
+            dT.taxa += tx;
+            dT.tva += tv;
+            dviRows.push(
+              `<tr><td class="mono">${esc(d.nr || "—")}</td><td>${d.data ? fmtD(d.data) : "—"}</td><td>${esc(m ? m.model : "?")} <span class="muted">· ${esc(x.orderId)}</span></td><td class="n">${nb}</td><td class="n">${lei(tx)}</td><td class="n">${lei(tv)}</td></tr>`,
+            );
+          }),
+        );
+        const dviH = dviRows.length
+          ? `<table><thead><tr><th>MRN DVI</th><th>Data</th><th>Model · comandă</th><th class="n">Buc. scoase</th><th class="n">Taxă vamală</th><th class="n">TVA vamal</th></tr></thead><tbody>${dviRows.join("")}<tr class="tot"><td colspan="3">Total scos din acest container</td><td class="n">${dT.buc}</td><td class="n">${lei(dT.taxa)}</td><td class="n">${lei(dT.tva)}</td></tr></tbody></table><div class="fnote">Când un articol DVI cuprinde marfă din mai multe containere, taxa și TVA-ul articolului sunt repartizate proporțional cu bucățile scoase din acest container.</div>`
+          : '<div class="muted">Nimic scos încă din acest container.</div>';
+        const rest = C ? C.buc - C.rel : 0;
+        const kpi = `<div class="fkpi"><div><span>Bucăți</span><b>${C ? C.buc : 0}</b></div><div><span>Scoase (DVI)</span><b>${C ? C.rel : 0}</b></div><div><span>Rămase în antrepozit</span><b>${rest}</b></div><div><span>Logistică container</span><b>${lei0((C ? C.total : 0) + (C ? C.opsNet || 0 : 0))}</b></div><div><span>Vamă + TVA (DVI)</span><b>${lei0(dT.taxa + dT.tva)}</b></div></div>`;
+        const sum = `<div class="fsum"><table><tbody>
+        <tr><td>Logistică container (navlu, asigurare, transport, port, T1, alte)</td><td class="n">${lei(C ? C.total : 0)}</td></tr>
+        <tr><td>Operațiuni vamale — Info TIR fără TVA</td><td class="n">${lei(C ? C.opsNet || 0 : 0)}</td></tr>
+        <tr><td>Taxă vamală (DVI, partea acestui container)</td><td class="n">${lei(dT.taxa)}</td></tr>
+        <tr class="tot"><td>Total cost fără TVA</td><td class="n">${lei((C ? C.total + (C.opsNet || 0) : 0) + dT.taxa)}</td></tr>
+        <tr><td>TVA vamal (deductibil)</td><td class="n">${lei(dT.tva)}</td></tr></tbody></table>
+        <table><tbody>
+        <tr><td>Stare container</td><td class="n">${esc((CONT_ST[C ? C.status : ""] || ["—"])[0])}</td></tr>
+        <tr><td>Bucăți rămase în antrepozit</td><td class="n">${rest}</td></tr>
+        ${rest && C && C.debt ? `<tr><td>Vamă + TVA de plătit pentru restul (estimat)</td><td class="n">${lei(C.debt)}</td></tr>` : ""}
+        ${dd.ok && ddActive(c) ? `<tr><td>D&D estimat (inclus în logistică dacă nu există plată reală)</td><td class="n">${lei(dd.totalLei)}</td></tr>` : ""}
+        </tbody></table></div>`;
+        const logo = antetLogoSrc(a)
+          ? `<img class="fh-logo" src="${antetLogoSrc(a)}" alt="Geeli">`
+          : `<div class="fh-word">GEELI</div>`;
+        const co = [
+          a.cui ? "CUI " + esc(a.cui) : "",
+          a.regcom ? "Reg. Com. " + esc(a.regcom) : "",
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        const contact = [
+          a.telefon ? "Tel. " + esc(a.telefon) : "",
+          esc(a.email || ""),
+          esc(a.web || ""),
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        return `<div class="fdoc">
+    <div class="fh">${logo}<div class="fh-co"><b>${esc(a.firma || "")}</b><br>${esc(a.adresa || "")}${co ? "<br>" + co : ""}${contact ? "<br>" + contact : ""}</div>
+      <div class="fh-doc"><b>FIȘĂ CONTAINER</b>Nr. ${esc(docNr)}<br>Data: ${now.toLocaleDateString("ro-RO")} ${now.toLocaleTimeString("ro-RO", { hour: "2-digit", minute: "2-digit" })}</div></div>
+    <div class="ftitle"><div><div class="muted" style="font-size:7.6pt;text-transform:uppercase;letter-spacing:.5px">Container · de la încărcare până la scoaterea din antrepozit</div><h1><span class="nr">${esc(c.nr || "(fără număr)")}</span></h1></div><span class="fst">${esc((CONT_ST[C ? C.status : ""] || ["—"])[0])}</span></div>
+    ${kpi}
+    ${sec(++n, "Identificare container și transport", ident)}
+    ${sec(++n, "Conținut și împărțirea spațiului", cont)}
+    ${sec(++n, "Istoric MRN și operațiuni vamale", mrn)}
+    ${sec(++n, "Free time și demurrage / detention", ddH)}
+    ${sec(++n, "Plăți înregistrate pe container", plH)}
+    ${sec(++n, "Costuri logistice container", costH)}
+    ${sec(++n, "Scoateri din antrepozit (DVI)", dviH)}
+    ${sec(++n, "Situație finală", sum)}
+    <div class="fsign"><div>Întocmit<br><b>${esc(userTag())}</b></div><div>Verificat</div><div>Aprobat</div></div>
+    <div class="ffoot"><span>${esc(a.firma || "")} · Geeli Import ERP · ${esc(docNr)}</span><span>Sumele în LEI; valorile marcate „estimare” se înlocuiesc automat cu plățile reale.</span></div>
+  </div>`;
+      }
+
+      /* ===== STATISTICI (doar admin) — totul citit din computeAll(), fără a modifica vreun calcul ===== */
+      const ST_COL = [
+        "#0f6b4f",
+        "#3b82f6",
+        "#f59e0b",
+        "#8b5cf6",
+        "#ef4444",
+        "#14b8a6",
+        "#64748b",
+        "#ec4899",
+        "#84cc16",
+        "#0ea5e9",
+        "#a16207",
+      ];
+      let statsF = null;
+      const _stTables = {};
+      function statsDef() {
+        const to = ddToday();
+        const d = new Date();
+        d.setMonth(d.getMonth() - 6);
+        return {
+          from: d.toISOString().slice(0, 10),
+          to,
+          preset: "6",
+          sup: "",
+          st: "",
+          tip: "",
+          spot: "",
+        };
+      }
+      function statsPreset(k) {
+        const to = ddToday(),
+          d = new Date();
+        if (k === "an") d.setMonth(0, 1);
+        else if (k === "tot") d.setFullYear(2000, 0, 1);
+        else d.setMonth(d.getMonth() - +k);
+        Object.assign(statsF, {
+          from: d.toISOString().slice(0, 10),
+          to,
+          preset: k,
+        });
+        vStats();
+      }
+      function statsSet(k, v) {
+        statsF[k] = v;
+        if (k === "from" || k === "to") statsF.preset = "";
+        vStats();
+      }
+      const daysBetween = (a, b) => (a && b ? dNum(b) - dNum(a) : null);
+      const ym = (d) => (d ? String(d).slice(0, 7) : "");
+      const ymLbl = (k) => {
+        const [y, m] = k.split("-");
+        return (
+          [
+            "ian",
+            "feb",
+            "mar",
+            "apr",
+            "mai",
+            "iun",
+            "iul",
+            "aug",
+            "sep",
+            "oct",
+            "nov",
+            "dec",
+          ][+m - 1] +
+          " " +
+          y.slice(2)
+        );
+      };
+      function monthsRange(from, to) {
+        const out = [];
+        let [y, m] = from.slice(0, 7).split("-").map(Number);
+        const [y2, m2] = to.slice(0, 7).split("-").map(Number);
+        while (y < y2 || (y === y2 && m <= m2)) {
+          out.push(y + "-" + String(m).padStart(2, "0"));
+          if (++m > 12) {
+            m = 1;
+            y++;
+          }
+          if (out.length > 120) break;
+        }
+        return out;
+      }
+      const nf0 = (v) =>
+        new Intl.NumberFormat("ro-RO", { maximumFractionDigits: 0 }).format(
+          v || 0,
+        );
+      const nfK = (v) =>
+        Math.abs(v) >= 1e6
+          ? (v / 1e6).toLocaleString("ro-RO", { maximumFractionDigits: 1 }) +
+            " mil"
+          : Math.abs(v) >= 1e4
+            ? Math.round(v / 1e3).toLocaleString("ro-RO") + " k"
+            : nf0(v);
+      const pctTxt = (v) =>
+        v == null || !isFinite(v)
+          ? "—"
+          : (v * 100).toLocaleString("ro-RO", { maximumFractionDigits: 1 }) +
+            "%";
+
+      /* --- grafice SVG --- */
+      function svgBars(items, o = {}) {
+        // items: [{lbl, v, note}]
+        const W = 680,
+          H = o.h || 220,
+          L = 52,
+          B = 34,
+          T = 14;
+        const max = Math.max(1, ...items.map((x) => x.v));
+        const n = Math.max(1, items.length),
+          bw = Math.min(46, ((W - L - 10) / n) * 0.62),
+          step = (W - L - 10) / n;
+        const y = (v) => T + (H - T - B) * (1 - v / max);
+        const ticks = [0, 0.25, 0.5, 0.75, 1].map((f) => max * f);
+        let s = `<svg class="st-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria || "grafic")}">`;
+        ticks.forEach(
+          (tv) =>
+            (s += `<line x1="${L}" x2="${W - 6}" y1="${y(tv)}" y2="${y(tv)}" stroke="#e5e8ec"/><text x="${L - 6}" y="${y(tv) + 3}" text-anchor="end" font-size="9.5" fill="#6b7280">${nfK(tv)}</text>`),
+        );
+        items.forEach((it, i) => {
+          const x = L + step * i + (step - bw) / 2;
+          const h = Math.max(0, H - B - y(it.v));
+          s += `<rect x="${x}" y="${y(it.v)}" width="${bw}" height="${h}" rx="3" fill="${it.c || o.c || ST_COL[0]}"><title>${esc(it.lbl)}: ${nf0(it.v)}</title></rect>`;
+          if (it.v)
+            s += `<text x="${x + bw / 2}" y="${y(it.v) - 4}" text-anchor="middle" font-size="9" fill="#374151">${esc(it.note != null ? it.note : nfK(it.v))}</text>`;
+          s += `<text x="${x + bw / 2}" y="${H - B + 13}" text-anchor="middle" font-size="9.5" fill="#4b5563">${esc(it.lbl)}</text>`;
+        });
+        return s + `</svg>`;
+      }
+      function svgStacked(rows, keys, o = {}) {
+        // rows: [{lbl, parts:{k:v}}] — bare verticale suprapuse
+        const W = 680,
+          H = o.h || 240,
+          L = 52,
+          B = 34,
+          T = 12;
+        const tot = (r) =>
+          keys.reduce((a, k) => a + Math.max(0, r.parts[k.k] || 0), 0);
+        const max = Math.max(1, ...rows.map(tot));
+        const n = Math.max(1, rows.length),
+          step = (W - L - 10) / n,
+          bw = Math.min(46, step * 0.62);
+        const y = (v) => T + (H - T - B) * (1 - v / max);
+        let s = `<svg class="st-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria || "grafic")}">`;
+        [0, 0.25, 0.5, 0.75, 1].forEach(
+          (f) =>
+            (s += `<line x1="${L}" x2="${W - 6}" y1="${y(max * f)}" y2="${y(max * f)}" stroke="#e5e8ec"/><text x="${L - 6}" y="${y(max * f) + 3}" text-anchor="end" font-size="9.5" fill="#6b7280">${nfK(max * f)}</text>`),
+        );
+        rows.forEach((r, i) => {
+          const x = L + step * i + (step - bw) / 2;
+          let acc = 0;
+          keys.forEach((k, j) => {
+            const v = Math.max(0, r.parts[k.k] || 0);
+            if (!v) return;
+            s += `<rect x="${x}" y="${y(acc + v)}" width="${bw}" height="${y(acc) - y(acc + v)}" fill="${k.c || ST_COL[j % ST_COL.length]}"><title>${esc(r.lbl)} · ${esc(k.lbl)}: ${nf0(v)}</title></rect>`;
+            acc += v;
+          });
+          if (acc)
+            s += `<text x="${x + bw / 2}" y="${y(acc) - 4}" text-anchor="middle" font-size="9" fill="#374151">${nfK(acc)}</text>`;
+          s += `<text x="${x + bw / 2}" y="${H - B + 13}" text-anchor="middle" font-size="9.5" fill="#4b5563">${esc(r.lbl.length > 16 ? r.lbl.slice(0, 15) + "…" : r.lbl)}</text>`;
+        });
+        return s + `</svg>` + legend(keys);
+      }
+      function svgHBars(items, o = {}) {
+        // bare orizontale: [{lbl, v, note}]
+        const W = 680,
+          rowH = 24,
+          L = o.L || 170,
+          H = items.length * rowH + 8;
+        const max = Math.max(1, ...items.map((x) => x.v));
+        let s = `<svg class="st-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria || "grafic")}">`;
+        items.forEach((it, i) => {
+          const y0 = 4 + i * rowH,
+            w = ((W - L - 90) * it.v) / max;
+          s += `<text x="${L - 8}" y="${y0 + 15}" text-anchor="end" font-size="10.5" fill="#374151">${esc(it.lbl.length > (o.max || 30) ? it.lbl.slice(0, (o.max || 30) - 1) + "…" : it.lbl)}</text><rect x="${L}" y="${y0 + 3}" width="${Math.max(1, w)}" height="${rowH - 9}" rx="3" fill="${it.c || o.c || ST_COL[0]}"><title>${esc(it.lbl)}: ${nf0(it.v)}</title></rect><text x="${L + w + 6}" y="${y0 + 15}" font-size="10" fill="#374151">${esc(it.note != null ? it.note : nf0(it.v))}</text>`;
+        });
+        return s + `</svg>`;
+      }
+      function svgShare(parts) {
+        // o singură bară 100% cu ponderi + legendă
+        const W = 680,
+          H = 34,
+          tot = parts.reduce((a, p) => a + Math.max(0, p.v), 0) || 1;
+        let x = 0,
+          s = `<svg class="st-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="structura costului">`;
+        parts.forEach((p, i) => {
+          const w = (W * Math.max(0, p.v)) / tot;
+          if (w <= 0) return;
+          s += `<rect x="${x}" y="4" width="${w}" height="26" fill="${p.c || ST_COL[i % ST_COL.length]}"><title>${esc(p.lbl)}: ${nf0(p.v)} lei (${pctTxt(p.v / tot)})</title></rect>`;
+          if (w > 44)
+            s += `<text x="${x + w / 2}" y="21" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="700">${pctTxt(p.v / tot)}</text>`;
+          x += w;
+        });
+        return (
+          s +
+          `</svg>` +
+          legend(
+            parts.map((p, i) => ({
+              lbl: p.lbl,
+              c: p.c || ST_COL[i % ST_COL.length],
+            })),
+          )
+        );
+      }
+      function svgLines(series, o = {}) {
+        // series: [{name, pts:[{x:'YYYY-MM-DD', y, lbl}]}]
+        const W = 680,
+          H = o.h || 240,
+          L = 56,
+          B = 30,
+          T = 12,
+          R = 14;
+        const xs = series.flatMap((s) => s.pts.map((p) => dNum(p.x)));
+        const ys = series.flatMap((s) => s.pts.map((p) => p.y));
+        if (!xs.length) return "";
+        const x0 = Math.min(...xs),
+          x1 = Math.max(...xs),
+          yMin = Math.min(...ys) * 0.95,
+          yMax = Math.max(...ys) * 1.05 || 1;
+        const X = (d) =>
+          L +
+          (x1 === x0
+            ? (W - L - R) / 2
+            : ((dNum(d) - x0) / (x1 - x0)) * (W - L - R));
+        const Y = (v) =>
+          T + (H - T - B) * (1 - (v - yMin) / (yMax - yMin || 1));
+        let s = `<svg class="st-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.aria || "evoluție")}">`;
+        [0, 0.25, 0.5, 0.75, 1].forEach((f) => {
+          const v = yMin + (yMax - yMin) * f;
+          s += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e5e8ec"/><text x="${L - 6}" y="${Y(v) + 3}" text-anchor="end" font-size="9.5" fill="#6b7280">${nfK(v)}</text>`;
+        });
+        series.forEach((se, i) => {
+          const c = ST_COL[i % ST_COL.length];
+          const pts = se.pts.slice().sort((a, b) => dNum(a.x) - dNum(b.x));
+          s += `<polyline fill="none" stroke="${c}" stroke-width="2" points="${pts.map((p) => X(p.x) + "," + Y(p.y)).join(" ")}"/>`;
+          pts.forEach(
+            (p) =>
+              (s += `<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="3.5" fill="${c}"><title>${esc(se.name)} · ${esc(p.lbl || "")} · ${fmtD(p.x)}: ${nf0(p.y)} lei</title></circle>`),
+          );
+        });
+        s += `<text x="${L}" y="${H - 8}" font-size="9.5" fill="#6b7280">${fmtD(dStr(x0))}</text><text x="${W - R}" y="${H - 8}" text-anchor="end" font-size="9.5" fill="#6b7280">${fmtD(dStr(x1))}</text>`;
+        return (
+          s +
+          `</svg>` +
+          legend(
+            series.map((se, i) => ({
+              lbl: se.name,
+              c: ST_COL[i % ST_COL.length],
+            })),
+          )
+        );
+      }
+      function legend(keys) {
+        return `<div class="st-leg">${keys.map((k, i) => `<span><i style="background:${k.c || ST_COL[i % ST_COL.length]}"></i>${esc(k.lbl)}</span>`).join("")}</div>`;
+      }
+      function stTable(id, head, rows, foot) {
+        // head: [{t, n}] ; rows: arrays of [display, raw]
+        _stTables[id] = {
+          head: head.map((h) => h.t),
+          rows: rows.map((r) => r.map((c) => (Array.isArray(c) ? c[1] : c))),
+        };
+        return `<div class="st-scroll"><table class="st-tbl"><thead><tr>${head.map((h) => `<th${h.n ? ' class="n"' : ""}>${esc(h.t)}</th>`).join("")}</tr></thead><tbody>${rows
+          .map(
+            (r) =>
+              `<tr>${r.map((c, j) => `<td${head[j].n ? ' class="n"' : ""}>${Array.isArray(c) ? c[0] : esc(c)}</td>`).join("")}</tr>`,
+          )
+          .join(
+            "",
+          )}${foot ? `<tr class="tot">${foot.map((c, j) => `<td${head[j].n ? ' class="n"' : ""}>${c}</td>`).join("")}</tr>` : ""}</tbody></table></div>`;
+      }
+      function stCard(titlu, sub, body, csvId) {
+        return `<div class="st-card"><div class="st-h"><h3>${titlu}</h3>${csvId ? `<button class="btn btn-default btn-sm st-noprint" onclick="statsCSV('${csvId}')">CSV</button>` : ""}${sub ? `<div class="st-sub">${sub}</div>` : ""}</div>${body}</div>`;
+      }
+      function statsCSV(id) {
+        const tb = _stTables[id];
+        if (!tb) return;
+        const q = (v) => {
+          const s =
+            v == null
+              ? ""
+              : typeof v === "number"
+                ? String(Math.round(v * 100) / 100).replace(".", ",")
+                : String(v);
+          return /[;"\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+        };
+        const csv =
+          "﻿" +
+          [tb.head, ...tb.rows].map((r) => r.map(q).join(";")).join("\r\n");
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(
+          new Blob([csv], { type: "text/csv;charset=utf-8" }),
+        );
+        a.download = `statistici_${id}_${statsF.from}_${statsF.to}.csv`;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      }
+
+      /* --- date --- */
+      function statsData() {
+        const F = statsF;
+        const R = computeAll();
+        const spotOf = (o) => String((o.maritim || {}).spot || "").trim();
+        const ords = DB.orders.filter((o) => {
+          const d = o.dataCreare || "";
+          if (!d || d < F.from || d > F.to) return false;
+          if (F.sup && o.supplier !== F.sup) return false;
+          if (F.st && o.status !== F.st) return false;
+          if (F.tip && o.tipAsamblare !== F.tip) return false;
+          if (F.spot && spotOf(o) !== F.spot) return false;
+          return true;
+        });
+        const ids = new Set(ords.map((o) => o.id));
+        const rows = ords.map((o) => {
+          const O = R.orders[o.id];
+          const conts = (O.contIds || []).map(contOf).filter(Boolean);
+          const desc =
+            conts
+              .map((c) => c.descarcare)
+              .filter(Boolean)
+              .sort()[0] || "";
+          const plas =
+            conts
+              .flatMap((c) =>
+                (c.ops || [])
+                  .filter((op) => op.tip === "plasare" && !op.anulat && op.data)
+                  .map((op) => op.data),
+              )
+              .sort()[0] || "";
+          const dvis = (DB.dvi || [])
+            .filter(
+              (d) => d.data && (d.art || []).some((a) => a.orderId === o.id),
+            )
+            .map((d) => d.data)
+            .sort();
+          const produs = O.M.reduce(
+            (a, m) => a + (m.produsLEI || 0) * (m.buc || 0),
+            0,
+          );
+          return {
+            o,
+            O,
+            conts,
+            desc,
+            plas,
+            dvi1: dvis[0] || "",
+            dviN: dvis[dvis.length - 1] || "",
+            nDvi: dvis.length,
+            produs,
+          };
+        });
+        return { R, ords, ids, rows };
+      }
+
+      function vStats() {
+        const wrap = document.getElementById("wrap");
+        if (!currentProfile || currentProfile.role !== "admin") {
+          wrap.innerHTML = `<div class="empty" style="padding:60px"><p>Statisticile sunt disponibile doar administratorului.</p></div>`;
+          return;
+        }
+        crumb([{ t: "Statistici" }]);
+        statsF = statsF || statsDef();
+        wrap.innerHTML = `<div class="page-h"><h1>Statistici comenzi</h1><div class="ft-actions"><button class="btn btn-primary btn-sm" onclick="printStatsPDF()">Raport PDF</button></div></div>${statsFilters()}<div id="statsBody">${statsBody()}</div>`;
+      }
+      function statsFilters() {
+        const F = statsF;
+        const uniq = (a) =>
+          [...new Set(a.filter(Boolean))].sort((x, y) =>
+            x.localeCompare(y, "ro"),
+          );
+        const opt = (arr, cur, all) =>
+          `<option value="">${all}</option>` +
+          arr
+            .map(
+              (v) =>
+                `<option ${v === cur ? "selected" : ""}>${esc(v)}</option>`,
+            )
+            .join("");
+        const sel = (k, lbl, arr, all) =>
+          `<div class="f"><label>${lbl}</label><select onchange="statsSet('${k}',this.value)">${opt(arr, F[k], all)}</select></div>`;
+        return `<div class="st-card st-noprint"><div class="st-filters">
+      <div class="f"><label>Perioadă (data creării comenzii)</label><div class="st-chips">${[
+        ["3", "3 luni"],
+        ["6", "6 luni"],
+        ["12", "12 luni"],
+        ["an", "Anul curent"],
+        ["tot", "Tot"],
+      ]
+        .map(
+          ([k, l]) =>
+            `<button class="${F.preset === k ? "on" : ""}" onclick="statsPreset('${k}')">${l}</button>`,
+        )
+        .join("")}</div></div>
+      <div class="f"><label>De la</label><input type="date" value="${F.from}" onchange="statsSet('from',this.value)"></div>
+      <div class="f"><label>Până la</label><input type="date" value="${F.to}" onchange="statsSet('to',this.value)"></div>
+      ${sel("sup", "Furnizor", uniq(DB.orders.map((o) => o.supplier)), "Toți")}
+      ${sel("st", "Status", uniq(DB.orders.map((o) => o.status)), "Toate")}
+      ${sel("tip", "Tip asamblare", uniq(DB.orders.map((o) => o.tipAsamblare)), "Toate")}
+      ${sel("spot", "Spot", uniq(DB.orders.map((o) => String((o.maritim || {}).spot || "").trim())), "Toate")}
+    </div></div>`;
+      }
+      function statsBody() {
+        const { R, rows, ids } = statsData();
+        const F = statsF;
+        if (!rows.length)
+          return `<div class="st-card"><div style="padding:30px;text-align:center;color:var(--muted)">Nicio comandă creată în perioada ${fmtD(F.from)} – ${fmtD(F.to)} cu filtrele alese.</div></div>`;
+        const S = (f) => rows.reduce((a, r) => a + (+f(r) || 0), 0);
+        const buc = S((r) => r.O.nrBuc),
+          costNet = S((r) => r.O.costTotalNet),
+          vanz = S((r) => r.O.vanzareTotala),
+          marja = S((r) => r.O.marjaTotala);
+        const produs = S((r) => r.produs),
+          taxa = S((r) => r.O.taxaTotal),
+          tva = S((r) => r.O.tvaTotal),
+          log = S((r) => r.O.logTotal),
+          extra = S((r) => r.O.extraAll);
+        const realCats = S((r) => r.O.realCats),
+          totCats = S((r) => r.O.totCats);
+        const valFOBlei = S((r) => r.produs),
+          platit = S((r) => r.O.platitLei),
+          schimb = S((r) => r.O.costSchimb);
+        const pctPl = rows.length
+          ? S((r) => r.O.pctPlatit * r.produs) / (produs || 1)
+          : 0;
+        let h = "";
+        // KPI
+        const K = (l, v, s) =>
+          `<div class="st-kpi"><span>${l}</span><b>${v}</b>${s ? `<i>${s}</i>` : ""}</div>`;
+        h += `<div class="st-kpis">${K("Comenzi", rows.length, `${fmtD(F.from)} – ${fmtD(F.to)}`)}${K("Bucăți", nf0(buc))}${K("Valoare marfă", lei0(valFOBlei), "preț FOB în lei")}${K("Cost total intrare", lei0(costNet), "fără TVA")}${K("Cost mediu / buc", lei0(buc ? costNet / buc : 0))}${K("Vânzare B2B estimată", lei0(vanz))}${K("Marjă estimată", lei0(marja), pctTxt(vanz ? marja / vanz : null) + " din vânzare")}${K("Costuri logistice reale", pctTxt(totCats ? realCats / totCats : null), "categorii cu plăți reale")}${K("Plătit furnizor", pctTxt(pctPl), lei0(platit) + " plătit total")}${K("Câștig/pierdere curs", lei0(-schimb), "față de BNR (+ = câștig)")}</div>`;
+        // 1. comenzi pe lună
+        const dts = rows.map((r) => r.o.dataCreare).sort();
+        const months = monthsRange(
+          dts[0] > F.from ? dts[0] : F.from,
+          dts[dts.length - 1] < F.to ? F.to : dts[dts.length - 1],
+        ).slice(-36);
+        const byM = {};
+        rows.forEach((r) => {
+          const k = ym(r.o.dataCreare);
+          (byM[k] = byM[k] || { n: 0, v: 0, c: 0 }).n++;
+          byM[k].v += r.produs;
+          byM[k].c += r.O.costTotalNet || 0;
+        });
+        h += stCard(
+          "Comenzi pe lună",
+          "valoarea mărfii (lei) · eticheta = număr comenzi",
+          svgBars(
+            months.map((k) => ({
+              lbl: ymLbl(k),
+              v: (byM[k] || {}).v || 0,
+              note: (byM[k] || {}).n ? byM[k].n + " cmd" : "",
+            })),
+            { aria: "comenzi pe lună" },
+          ) +
+            stTable(
+              "luni",
+              [
+                { t: "Luna" },
+                { t: "Comenzi", n: 1 },
+                { t: "Valoare marfă (lei)", n: 1 },
+                { t: "Cost total intrare (lei)", n: 1 },
+              ],
+              months
+                .filter((k) => byM[k])
+                .map((k) => [
+                  ymLbl(k),
+                  [byM[k].n, byM[k].n],
+                  [nf0(byM[k].v), byM[k].v],
+                  [nf0(byM[k].c), byM[k].c],
+                ]),
+            ),
+          "luni",
+        );
+        // 2. status
+        const bySt = {};
+        rows.forEach((r) => (bySt[r.o.status] = (bySt[r.o.status] || 0) + 1));
+        h += stCard(
+          "Comenzi pe status",
+          "",
+          svgHBars(
+            Object.entries(bySt)
+              .sort((a, b) => b[1] - a[1])
+              .map(([k, v], i) => ({
+                lbl: k,
+                v,
+                c: ST_COL[i % ST_COL.length],
+                note: v + " (" + pctTxt(v / rows.length) + ")",
+              })),
+            { aria: "status" },
+          ),
+        );
+        // 3. structura costului
+        const catParts = LOG_CATS.map((k, i) => ({
+          lbl: k.sh || k.lbl,
+          v: S((r) => (r.O.cat || {})[k.k]),
+          c: ST_COL[(i + 1) % ST_COL.length],
+        })).filter((p) => p.v > 0);
+        const parts = [
+          { lbl: "Marfă (FOB)", v: produs, c: ST_COL[0] },
+          ...catParts,
+          { lbl: "Taxă vamală", v: taxa, c: "#a16207" },
+          { lbl: "Extra (Info TIR, comisioane…)", v: extra, c: "#64748b" },
+        ].filter((p) => p.v > 0);
+        const tp = parts.reduce((a, p) => a + p.v, 0);
+        h += stCard(
+          "Structura costului total de intrare",
+          `${lei0(tp)} fără TVA · TVA vamal separat: ${lei0(tva)}`,
+          svgShare(parts) +
+            stTable(
+              "structura",
+              [
+                { t: "Componentă" },
+                { t: "Lei", n: 1 },
+                { t: "Pondere", n: 1 },
+                { t: "Lei / bucată", n: 1 },
+              ],
+              parts.map((p) => [
+                p.lbl,
+                [nf0(p.v), p.v],
+                [pctTxt(p.v / tp), p.v / tp],
+                [nf0(buc ? p.v / buc : 0), buc ? p.v / buc : 0],
+              ]),
+              ["Total", nf0(tp), "100%", nf0(buc ? tp / buc : 0)],
+            ),
+          "structura",
+        );
+        // 4. cost pe bucată pe model
+        const mods = {};
+        rows.forEach((r) =>
+          r.O.M.forEach((m) => {
+            const k = (m.model || "?").trim();
+            const x = (mods[k] = mods[k] || {
+              buc: 0,
+              produs: 0,
+              tr: 0,
+              taxa: 0,
+              ex: 0,
+              cost: 0,
+              vanz: 0,
+              marja: 0,
+              ords: new Set(),
+            });
+            const b = +m.buc || 0;
+            x.buc += b;
+            x.produs += (m.produsLEI || 0) * b;
+            x.tr += (m.transportBuc || 0) * b;
+            x.taxa += (m.taxaVamala || 0) * b;
+            x.ex += (m.extraBuc || 0) * b;
+            x.cost += (m.costNet || 0) * b;
+            x.vanz += (m.vanzareB2B || 0) * b;
+            x.marja += (m.marjaBuc || 0) * b;
+            x.ords.add(r.o.id);
+          }),
+        );
+        const mList = Object.entries(mods)
+          .filter(([, x]) => x.buc > 0)
+          .sort((a, b) => b[1].cost - a[1].cost);
+        const keys = [
+          { k: "produs", lbl: "Marfă", c: ST_COL[0] },
+          { k: "tr", lbl: "Transport", c: ST_COL[1] },
+          { k: "taxa", lbl: "Taxă vamală", c: "#a16207" },
+          { k: "ex", lbl: "Extra", c: "#64748b" },
+        ];
+        h += stCard(
+          "Cost pe bucată, pe model",
+          "medie ponderată cu bucățile din comenzile filtrate · fără TVA",
+          svgStacked(
+            mList
+              .slice(0, 12)
+              .map(([k, x]) => ({
+                lbl: k,
+                parts: {
+                  produs: x.produs / x.buc,
+                  tr: x.tr / x.buc,
+                  taxa: x.taxa / x.buc,
+                  ex: x.ex / x.buc,
+                },
+              })),
+            keys,
+            { aria: "cost pe model" },
+          ) +
+            stTable(
+              "modele",
+              [
+                { t: "Model" },
+                { t: "Comenzi", n: 1 },
+                { t: "Bucăți", n: 1 },
+                { t: "Marfă / buc", n: 1 },
+                { t: "Transport / buc", n: 1 },
+                { t: "Vamă / buc", n: 1 },
+                { t: "Extra / buc", n: 1 },
+                { t: "Cost net / buc", n: 1 },
+                { t: "Vânzare B2B / buc", n: 1 },
+                { t: "Marjă / buc", n: 1 },
+                { t: "Marjă %", n: 1 },
+              ],
+              mList.map(([k, x]) => [
+                k,
+                [x.ords.size, x.ords.size],
+                [nf0(x.buc), x.buc],
+                [nf0(x.produs / x.buc), x.produs / x.buc],
+                [nf0(x.tr / x.buc), x.tr / x.buc],
+                [nf0(x.taxa / x.buc), x.taxa / x.buc],
+                [nf0(x.ex / x.buc), x.ex / x.buc],
+                [nf0(x.cost / x.buc), x.cost / x.buc],
+                [nf0(x.vanz / x.buc), x.vanz / x.buc],
+                [nf0(x.marja / x.buc), x.marja / x.buc],
+                [
+                  pctTxt(x.vanz ? x.marja / x.vanz : null),
+                  x.vanz ? x.marja / x.vanz : "",
+                ],
+              ]),
+            ),
+          "modele",
+        );
+        // 5. evoluția costului pe bucată (modele în ≥2 comenzi)
+        const ser = {};
+        rows.forEach((r) =>
+          r.O.M.forEach((m) => {
+            if (!+m.buc) return;
+            const k = (m.model || "?").trim();
+            (ser[k] = ser[k] || []).push({
+              x: r.o.dataCreare,
+              y: m.costNet || 0,
+              lbl: r.o.id,
+            });
+          }),
+        );
+        const sList = Object.entries(ser)
+          .filter(([, p]) => p.length >= 2)
+          .slice(0, 8)
+          .map(([name, pts]) => ({ name, pts }));
+        h += stCard(
+          "Evoluția costului pe bucată",
+          "modele prezente în cel puțin 2 comenzi din perioadă · cost net/buc la data comenzii",
+          sList.length
+            ? svgLines(sList, { aria: "evoluție cost" })
+            : `<div style="color:var(--muted);font-size:12.5px">Niciun model nu apare în 2 sau mai multe comenzi în perioada aleasă — extinde perioada (ex. „Tot”).</div>`,
+        );
+        // 6. pe comandă
+        h += stCard(
+          "Rezultat pe comandă",
+          "",
+          svgHBars(
+            rows
+              .slice()
+              .sort((a, b) => (b.O.marjaTotala || 0) - (a.O.marjaTotala || 0))
+              .slice(0, 15)
+              .map((r) => ({
+                lbl: r.o.id + " · " + (r.o.produs || ""),
+                v: Math.max(0, r.O.marjaTotala || 0),
+                note:
+                  lei0(r.O.marjaTotala) +
+                  " · " +
+                  pctTxt(
+                    r.O.vanzareTotala
+                      ? r.O.marjaTotala / r.O.vanzareTotala
+                      : null,
+                  ),
+                c: ST_COL[0],
+              })),
+            { aria: "marjă pe comandă", L: 260, max: 40 },
+          ) +
+            stTable(
+              "comenzi",
+              [
+                { t: "Comandă" },
+                { t: "Data" },
+                { t: "Furnizor" },
+                { t: "Status" },
+                { t: "Buc", n: 1 },
+                { t: "Valoare FOB", n: 1 },
+                { t: "Cost total net", n: 1 },
+                { t: "Cost / buc", n: 1 },
+                { t: "Vânzare B2B", n: 1 },
+                { t: "Marjă", n: 1 },
+                { t: "Cost final?" },
+              ],
+              rows.map((r) => [
+                [
+                  `<a href="#" onclick="openDoc('${esc(r.o.id)}');return false">${esc(r.o.id)}</a>`,
+                  r.o.id,
+                ],
+                [fmtD(r.o.dataCreare), r.o.dataCreare],
+                r.o.supplier || "",
+                r.o.status || "",
+                [nf0(r.O.nrBuc), r.O.nrBuc],
+                [val(r.O.valoareFOB, r.o.valutaFOB), r.O.valoareFOB],
+                [nf0(r.O.costTotalNet), r.O.costTotalNet],
+                [nf0(r.O.costNet), r.O.costNet],
+                [nf0(r.O.vanzareTotala), r.O.vanzareTotala],
+                [nf0(r.O.marjaTotala), r.O.marjaTotala],
+                r.O.final ? "da" : "parțial / estimat",
+              ]),
+              [
+                "Total",
+                "",
+                "",
+                "",
+                nf0(buc),
+                "",
+                nf0(costNet),
+                nf0(buc ? costNet / buc : 0),
+                nf0(vanz),
+                nf0(marja),
+                "",
+              ],
+            ),
+          "comenzi",
+        );
+        // 7. furnizori
+        const sup = {};
+        rows.forEach((r) => {
+          const k = r.o.supplier || "(fără furnizor)";
+          const x = (sup[k] = sup[k] || {
+            n: 0,
+            buc: 0,
+            val: 0,
+            cost: 0,
+            marja: 0,
+            vanz: 0,
+            lead: [],
+            delay: [],
+          });
+          x.n++;
+          x.buc += r.O.nrBuc || 0;
+          x.val += r.produs;
+          x.cost += r.O.costTotalNet || 0;
+          x.marja += r.O.marjaTotala || 0;
+          x.vanz += r.O.vanzareTotala || 0;
+          const ld = daysBetween(r.o.dataCreare, r.desc);
+          if (ld != null) x.lead.push(ld);
+          const dl = daysBetween((r.o.maritim || {}).etaPOD, r.desc);
+          if (dl != null) x.delay.push(dl);
+        });
+        const avg = (a) =>
+          a.length ? a.reduce((s, v) => s + v, 0) / a.length : null;
+        const sL = Object.entries(sup).sort((a, b) => b[1].val - a[1].val);
+        h += stCard(
+          "Furnizori",
+          "termen = de la crearea comenzii la descărcarea în port · întârziere = descărcare reală față de ETA POD (+ = mai târziu)",
+          svgHBars(
+            sL.map(([k, x], i) => ({
+              lbl: k,
+              v: x.val,
+              note: lei0(x.val) + " · " + x.n + " cmd",
+              c: ST_COL[i % ST_COL.length],
+            })),
+            { aria: "furnizori", L: 200 },
+          ) +
+            stTable(
+              "furnizori",
+              [
+                { t: "Furnizor" },
+                { t: "Comenzi", n: 1 },
+                { t: "Bucăți", n: 1 },
+                { t: "Valoare marfă", n: 1 },
+                { t: "Cost total net", n: 1 },
+                { t: "Marjă", n: 1 },
+                { t: "Marjă %", n: 1 },
+                { t: "Termen mediu (zile)", n: 1 },
+                { t: "Întârziere medie ETA (zile)", n: 1 },
+              ],
+              sL.map(([k, x]) => [
+                k,
+                [x.n, x.n],
+                [nf0(x.buc), x.buc],
+                [nf0(x.val), x.val],
+                [nf0(x.cost), x.cost],
+                [nf0(x.marja), x.marja],
+                [
+                  pctTxt(x.vanz ? x.marja / x.vanz : null),
+                  x.vanz ? x.marja / x.vanz : "",
+                ],
+                [
+                  avg(x.lead) == null ? "—" : Math.round(avg(x.lead)),
+                  avg(x.lead) ?? "",
+                ],
+                [
+                  avg(x.delay) == null ? "—" : Math.round(avg(x.delay)),
+                  avg(x.delay) ?? "",
+                ],
+              ]),
+            ),
+          "furnizori",
+        );
+        // 8. durate etape
+        const st = [
+          [
+            "Creare → ETA încărcare (plan)",
+            (r) => daysBetween(r.o.dataCreare, (r.o.maritim || {}).etaFOB),
+          ],
+          [
+            "ETA încărcare → ETA port (plan)",
+            (r) =>
+              daysBetween(
+                (r.o.maritim || {}).etaFOB,
+                (r.o.maritim || {}).etaPOD,
+              ),
+          ],
+          [
+            "ETA port → descărcare reală",
+            (r) => daysBetween((r.o.maritim || {}).etaPOD, r.desc),
+          ],
+          [
+            "Descărcare → plasare antrepozit",
+            (r) => daysBetween(r.desc, r.plas),
+          ],
+          ["Descărcare → primul DVI", (r) => daysBetween(r.desc, r.dvi1)],
+          [
+            "Primul → ultimul DVI",
+            (r) => (r.nDvi > 1 ? daysBetween(r.dvi1, r.dviN) : null),
+          ],
+          [
+            "Total: creare → primul DVI",
+            (r) => daysBetween(r.o.dataCreare, r.dvi1),
+          ],
+        ];
+        const stats = st.map(([l, f]) => {
+          const v = rows.map(f).filter((x) => x != null);
+          return {
+            l,
+            n: v.length,
+            avg: avg(v),
+            min: v.length ? Math.min(...v) : null,
+            max: v.length ? Math.max(...v) : null,
+          };
+        });
+        h += stCard(
+          "Durata etapelor (zile)",
+          "media pe comenzile care au ambele date completate · descărcarea = primul container descărcat al comenzii",
+          svgHBars(
+            stats
+              .filter((s) => s.avg != null)
+              .map((s, i) => ({
+                lbl: s.l,
+                v: Math.max(0, s.avg),
+                note: Math.round(s.avg) + " zile (" + s.n + " cmd)",
+                c: s.avg < 0 ? "#ef4444" : ST_COL[i % ST_COL.length],
+              })),
+            { aria: "durate", L: 260, max: 40 },
+          ) +
+            stTable(
+              "etape",
+              [
+                { t: "Etapă" },
+                { t: "Comenzi", n: 1 },
+                { t: "Medie", n: 1 },
+                { t: "Minim", n: 1 },
+                { t: "Maxim", n: 1 },
+              ],
+              stats.map((s) => [
+                s.l,
+                [s.n, s.n],
+                [s.avg == null ? "—" : Math.round(s.avg), s.avg ?? ""],
+                [s.min ?? "—", s.min ?? ""],
+                [s.max ?? "—", s.max ?? ""],
+              ]),
+            ) +
+            `<details class="st-noprint" style="margin-top:8px"><summary style="cursor:pointer;font-size:12px;font-weight:700">Detaliu pe comandă</summary>` +
+            stTable(
+              "etape_comenzi",
+              [
+                { t: "Comandă" },
+                { t: "Creare" },
+                { t: "ETA FOB" },
+                { t: "ETA POD" },
+                { t: "Descărcare" },
+                { t: "Plasare" },
+                { t: "Primul DVI" },
+                { t: "Ultimul DVI" },
+                { t: "Întârziere ETA", n: 1 },
+              ],
+              rows.map((r) => [
+                r.o.id,
+                fmtD(r.o.dataCreare),
+                fmtD((r.o.maritim || {}).etaFOB),
+                fmtD((r.o.maritim || {}).etaPOD),
+                fmtD(r.desc),
+                fmtD(r.plas),
+                fmtD(r.dvi1),
+                fmtD(r.dviN),
+                [
+                  daysBetween((r.o.maritim || {}).etaPOD, r.desc) ?? "—",
+                  daysBetween((r.o.maritim || {}).etaPOD, r.desc) ?? "",
+                ],
+              ]),
+            ) +
+            `</details>`,
+          "etape",
+        );
+        // 9. plăți pe lună pe categorii (plățile de container împărțite după cota comenzii în container)
+        const payM = {};
+        const catK = [
+          { k: "furnizor", lbl: "Furnizor (marfă)", c: ST_COL[0] },
+          ...LOG_CATS.map((k, i) => ({
+            k: k.k,
+            lbl: k.sh || k.lbl,
+            c: ST_COL[(i + 1) % ST_COL.length],
+          })),
+          { k: "comision", lbl: "Comision bancar", c: "#64748b" },
+        ];
+        const shareIn = (cid, oid) =>
+          ((R.conts[cid] || {}).lines || [])
+            .filter((L) => L.l.orderId === oid)
+            .reduce((a, L) => a + (L.share || 0), 0);
+        (DB.plati || []).forEach((p) => {
+          const lei = +(R.pay[p.id] || {}).lei || 0;
+          if (!lei || !p.data) return;
+          let f = 0;
+          if (p.contId) rows.forEach((r) => (f += shareIn(p.contId, r.o.id)));
+          else if (ids.has(p.orderId)) f = 1;
+          if (!f) return;
+          const k = ym(p.data);
+          const x = (payM[k] = payM[k] || {});
+          x[p.tip] = (x[p.tip] || 0) + lei * f;
+        });
+        const pMonths = Object.keys(payM).sort();
+        const usedK = catK.filter((k) => pMonths.some((m) => payM[m][k.k]));
+        h += stCard(
+          "Plăți efectuate pe lună",
+          "pentru comenzile filtrate · plățile pe container sunt împărțite după cota comenzii în container",
+          pMonths.length
+            ? svgStacked(
+                pMonths.map((m) => ({ lbl: ymLbl(m), parts: payM[m] })),
+                usedK,
+                { aria: "plăți pe lună" },
+              ) +
+                stTable(
+                  "plati_luna",
+                  [
+                    { t: "Luna" },
+                    ...usedK.map((k) => ({ t: k.lbl, n: 1 })),
+                    { t: "Total", n: 1 },
+                  ],
+                  pMonths.map((m) => [
+                    ymLbl(m),
+                    ...usedK.map((k) => [
+                      nf0(payM[m][k.k] || 0),
+                      payM[m][k.k] || 0,
+                    ]),
+                    [
+                      nf0(usedK.reduce((a, k) => a + (payM[m][k.k] || 0), 0)),
+                      usedK.reduce((a, k) => a + (payM[m][k.k] || 0), 0),
+                    ],
+                  ]),
+                )
+            : `<div style="color:var(--muted);font-size:12.5px">Nicio plată cu dată pentru comenzile filtrate.</div>`,
+          "plati_luna",
+        );
+        // 10. plată furnizor + curs
+        h += stCard(
+          "Plata furnizorului și cursul valutar",
+          "curs efectiv = media plăților reale către furnizor · câștig/pierdere = diferența față de cursul BNR introdus pe plăți",
+          stTable(
+            "furnizor_plata",
+            [
+              { t: "Comandă" },
+              { t: "Metoda de plată" },
+              { t: "Valoare FOB", n: 1 },
+              { t: "Plătit (valută)", n: 1 },
+              { t: "% plătit", n: 1 },
+              { t: "Rest de plată", n: 1 },
+              { t: "Curs estimat", n: 1 },
+              { t: "Curs efectiv", n: 1 },
+              { t: "Câștig / pierdere curs (lei)", n: 1 },
+            ],
+            rows.map((r) => [
+              r.o.id,
+              (r.o.metodaPlata && r.o.metodaPlata.nume) || "manual",
+              [val(r.O.valoareFOB, r.o.valutaFOB), r.O.valoareFOB],
+              [val(r.O.paidFX, r.o.valutaFOB), r.O.paidFX],
+              [pctTxt(r.O.pctPlatit), r.O.pctPlatit],
+              [
+                val(Math.max(0, r.O.valoareFOB - r.O.paidFX), r.o.valutaFOB),
+                Math.max(0, r.O.valoareFOB - r.O.paidFX),
+              ],
+              [(r.O.cFOBest || 0).toFixed(4), r.O.cFOBest],
+              [
+                r.O.cursMediuFurn ? r.O.cursMediuFurn.toFixed(4) : "—",
+                r.O.cursMediuFurn || "",
+              ],
+              [nf0(-(r.O.costSchimb || 0)), -(r.O.costSchimb || 0)],
+            ]),
+            ["Total", "", "", "", "", "", "", "", nf0(-schimb)],
+          ),
+          "furnizor_plata",
+        );
+        // 11. vamă și antrepozit
+        h += stCard(
+          "Vamă și antrepozit, pe comandă",
+          "taxa și TVA-ul din DVI-urile reale; pentru marfa încă nescoasă — estimare după cota din comandă",
+          stTable(
+            "vama",
+            [
+              { t: "Comandă" },
+              { t: "Bucăți", n: 1 },
+              { t: "Scoase (DVI)", n: 1 },
+              { t: "Rămase", n: 1 },
+              { t: "DVI-uri", n: 1 },
+              { t: "Taxă vamală", n: 1 },
+              { t: "TVA vamal", n: 1 },
+              { t: "Sursă" },
+            ],
+            rows.map((r) => [
+              r.o.id,
+              [nf0(r.O.nrBuc), r.O.nrBuc],
+              [nf0(r.O.relBuc), r.O.relBuc],
+              [
+                nf0((r.O.nrBuc || 0) - (r.O.relBuc || 0)),
+                (r.O.nrBuc || 0) - (r.O.relBuc || 0),
+              ],
+              [r.nDvi, r.nDvi],
+              [nf0(r.O.taxaTotal), r.O.taxaTotal],
+              [nf0(r.O.tvaTotal), r.O.tvaTotal],
+              r.O.vamaDVI
+                ? r.O.relBuc >= r.O.nrBuc
+                  ? "DVI real"
+                  : "DVI + estimare"
+                : "estimare",
+            ]),
+            [
+              "Total",
+              nf0(buc),
+              nf0(S((r) => r.O.relBuc)),
+              nf0(buc - S((r) => r.O.relBuc)),
+              S((r) => r.nDvi),
+              nf0(taxa),
+              nf0(tva),
+              "",
+            ],
+          ),
+          "vama",
+        );
+        // 12. logistică pe container, pe luna descărcării
+        const cM = {};
+        const seen = new Set();
+        rows.forEach((r) =>
+          r.conts.forEach((c) => {
+            if (seen.has(c.id)) return;
+            seen.add(c.id);
+            const C = R.conts[c.id];
+            if (!C || !c.descarcare) return;
+            const k = ym(c.descarcare);
+            const x = (cM[k] = cM[k] || { n: 0, cost: 0, dd: 0 });
+            x.n++;
+            x.cost += C.total || 0;
+            x.dd += (C.cat || {}).portExtra || 0;
+          }),
+        );
+        const cMonths = Object.keys(cM).sort();
+        h += stCard(
+          "Cost logistic pe container",
+          "containerele comenzilor filtrate, după luna descărcării · cost logistic mediu pe container (lei)",
+          cMonths.length
+            ? svgBars(
+                cMonths.map((m) => ({
+                  lbl: ymLbl(m),
+                  v: cM[m].cost / cM[m].n,
+                  note: nfK(cM[m].cost / cM[m].n) + " (" + cM[m].n + ")",
+                })),
+                { aria: "cost container", c: ST_COL[1] },
+              ) +
+                stTable(
+                  "containere_luna",
+                  [
+                    { t: "Luna descărcării" },
+                    { t: "Containere", n: 1 },
+                    { t: "Cost logistic total", n: 1 },
+                    { t: "Mediu / container", n: 1 },
+                    { t: "Stocare / demurrage / staționare", n: 1 },
+                  ],
+                  cMonths.map((m) => [
+                    ymLbl(m),
+                    [cM[m].n, cM[m].n],
+                    [nf0(cM[m].cost), cM[m].cost],
+                    [nf0(cM[m].cost / cM[m].n), cM[m].cost / cM[m].n],
+                    [nf0(cM[m].dd), cM[m].dd],
+                  ]),
+                )
+            : `<div style="color:var(--muted);font-size:12.5px">Niciun container descărcat pentru comenzile filtrate.</div>`,
+          "containere_luna",
+        );
+        h += `<div style="font-size:11.5px;color:var(--muted);margin:4px 2px 20px">Cifrele sunt aceleași ca în fișele comenzilor (aceleași funcții de calcul). Unde nu există încă plăți sau DVI-uri reale, valorile sunt estimări.</div>`;
+        return h;
+      }
+      function printStatsPDF() {
+        const a = antet();
+        const now = new Date();
+        const logo = antetLogoSrc(a)
+          ? `<img class="fh-logo" src="${antetLogoSrc(a)}" alt="Geeli">`
+          : `<div class="fh-word">GEELI</div>`;
+        const f = statsF;
+        const flt = [
+          f.sup && "furnizor: " + f.sup,
+          f.st && "status: " + f.st,
+          f.tip && "tip: " + f.tip,
+          f.spot && "spot: " + f.spot,
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        document.getElementById("printArea").innerHTML = `<div class="fdoc">
+    <div class="fh">${logo}<div class="fh-co"><b>${esc(a.firma || "")}</b><br>${esc(a.adresa || "")}</div><div class="fh-doc"><b>RAPORT STATISTIC</b>Comenzi import<br>Generat: ${now.toLocaleDateString("ro-RO")} ${now.toLocaleTimeString("ro-RO", { hour: "2-digit", minute: "2-digit" })}</div></div>
+    <div class="ftitle"><div><div class="muted" style="font-size:7.6pt;text-transform:uppercase;letter-spacing:.5px">Perioada (data creării comenzii)</div><h1>${fmtD(f.from)} – ${fmtD(f.to)}</h1></div><span class="fst">${esc(flt || "toate comenzile")}</span></div>
+    ${statsBody()}
+    <div class="fsign"><div>Întocmit<br><b>${esc(userTag())}</b></div><div>Verificat</div><div>Aprobat</div></div>
+    <div class="ffoot"><span>${esc(a.firma || "")} · Geeli Import ERP · raport statistic</span><span>Sume în LEI, fără TVA, dacă nu e specificat altfel.</span></div></div>`;
+        const old = document.title;
+        document.title = `Raport statistic comenzi ${f.from} - ${f.to}`;
+        const back = () => {
+          document.title = old;
+          window.removeEventListener("afterprint", back);
+        };
+        window.addEventListener("afterprint", back);
+        setTimeout(() => window.print(), 120);
+      }
+
       /* ===== MODAL / EXPORT / TOAST ===== */
       function openModal(t, b, f) {
         document.getElementById("modal").innerHTML =
@@ -8609,31 +11173,142 @@
         a.click();
         toast("Backup salvat (fișierele rămân în Supabase Storage)");
       }
+      /* ===== IMPORT DIN BACKUP (sigur, multi-utilizator) =====
+   Doar admin. Fișierul e verificat pe o copie; nimic nu se scrie până la confirmare.
+   Nu șterge nimic din Supabase: adaugă rândurile care lipsesc și, doar dacă bifezi, le înlocuiește pe cele existente. */
+      let _imp = null;
       function importBackup() {
+        if (!currentProfile || currentProfile.role !== "admin")
+          return toast(
+            "Importul din backup e permis doar administratorului",
+            true,
+          );
         const inp = document.createElement("input");
         inp.type = "file";
         inp.accept = ".json";
         inp.onchange = (e) => {
           const fr = new FileReader();
-          fr.onload = async () => {
-            try {
-              const obj = JSON.parse(fr.result);
-              delete obj._files;
-              DB = obj;
-              migrate();
-              migrateV19();
-              migrateV20();
-              ensureUniqueIds();
-              save();
-              go("dashboard");
-              toast("Backup încărcat");
-            } catch (err) {
-              toast("Fișier invalid");
-            }
-          };
+          fr.onload = () => impCheck(fr.result);
           fr.readAsText(e.target.files[0]);
         };
         inp.click();
+      }
+      function impCheck(text) {
+        let obj;
+        try {
+          obj = JSON.parse(text);
+        } catch (e) {
+          return toast(
+            "Fișierul nu e JSON valid — nu s-a încărcat nimic",
+            true,
+          );
+        }
+        const keys = Object.keys(TABLES);
+        if (
+          !obj ||
+          typeof obj !== "object" ||
+          !Array.isArray(obj.orders) ||
+          keys.some((k) => obj[k] !== undefined && !Array.isArray(obj[k]))
+        )
+          return toast(
+            "Fișierul nu e un backup Geeli Import — nu s-a încărcat nimic",
+            true,
+          );
+        delete obj._files;
+        const keep = DB;
+        _suspendSave = true;
+        let tmp;
+        try {
+          DB = JSON.parse(JSON.stringify(obj));
+          keys.forEach((k) => (DB[k] = Array.isArray(DB[k]) ? DB[k] : []));
+          DB.settings = DB.settings || { garantie: 0 };
+          migrate();
+          migrateV19();
+          migrateV20();
+          ensureUniqueIds();
+          computeAll(); // verifică și că datele se pot calcula
+          tmp = DB;
+        } catch (err) {
+          tmp = null;
+        } finally {
+          DB = keep;
+          _suspendSave = false;
+          invalidateCalc();
+        }
+        if (!tmp)
+          return toast(
+            "Backup-ul are o structură necunoscută — nu s-a încărcat nimic",
+            true,
+          );
+        const lbl = {
+          offers: "oferte",
+          suppliers: "furnizori",
+          orders: "comenzi",
+          containers: "containere",
+          plati: "plăți",
+          dvi: "DVI-uri",
+        };
+        const rows = keys.map((k) => {
+          const ids = new Set(DB[k].map((r) => r.id));
+          const n = tmp[k].length,
+            ex = tmp[k].filter((r) => ids.has(r.id)).length;
+          return { k, n, nou: n - ex, ex };
+        });
+        _imp = tmp;
+        openModal(
+          "Import din backup",
+          `<div style="font-size:13px;margin-bottom:10px">Fișierul e valid. Conține:</div>
+        <table class="grid-tbl"><thead><tr><th>Tip</th><th style="text-align:right">În fișier</th><th style="text-align:right">Noi</th><th style="text-align:right">Există deja</th></tr></thead><tbody>${rows
+          .map(
+            (r) =>
+              `<tr><td style="padding:7px 10px">${lbl[r.k]}</td><td style="padding:7px 10px;text-align:right">${r.n}</td><td style="padding:7px 10px;text-align:right">${r.nou}</td><td style="padding:7px 10px;text-align:right">${r.ex}</td></tr>`,
+          )
+          .join("")}</tbody></table>
+        <div class="res-note" style="margin-top:12px"><span>Nu se șterge nimic din baza online. Înregistrările noi se adaugă.</span></div>
+        <label style="display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:13px"><input type="checkbox" id="impOver" style="margin-top:3px">Înlocuiește și înregistrările care există deja cu versiunea din backup (modificările făcute după data backup-ului la acestea se pierd)</label>`,
+          `<button class="btn btn-default" onclick="closeModal()">Renunță</button><button class="btn btn-primary" onclick="impRun()">Importă</button>`,
+        );
+      }
+      async function impRun() {
+        if (!_imp) return;
+        const over = document.getElementById("impOver").checked;
+        closeModal();
+        toast("Se importă…");
+        const errors = [];
+        let add = 0,
+          rep = 0;
+        for (const k of Object.keys(TABLES)) {
+          const table = TABLES[k];
+          const have = new Map(DB[k].map((r) => [r.id, r]));
+          await pool(_imp[k], 6, async (r) => {
+            const cur = have.get(r.id);
+            if (cur && !over) return;
+            const data = Object.assign(JSON.parse(JSON.stringify(r)), {
+              _v: (cur ? +cur._v || 0 : 0) + 1,
+              _by: userTag() + " (import backup)",
+              _at: new Date().toISOString(),
+            });
+            const res = cur
+              ? await sb.from(table).update({ data }).eq("id", r.id)
+              : await sb.from(table).insert({ id: r.id, data });
+            if (res.error) errors.push(`${r.id}: ${res.error.message}`);
+            else cur ? rep++ : add++;
+          });
+        }
+        _imp = null;
+        DB = await load();
+        setBaseline();
+        migrate();
+        migrateV19();
+        migrateV20();
+        ensureUniqueIds();
+        invalidateCalc();
+        go("dashboard");
+        if (errors.length)
+          saveBanner(
+            `Import parțial: ${add} adăugate, ${rep} înlocuite, ${errors.length} erori (${errors.slice(0, 2).join(" · ")})`,
+          );
+        else toast(`Import terminat: ${add} adăugate, ${rep} înlocuite`);
       }
       let tT;
       function toast(m, isErr) {
@@ -9021,6 +11696,8 @@
         document.getElementById("appRoot").style.display = "";
         renderShellUserInfo();
         DB = await load();
+        setBaseline();
+        _lastSync = Date.now();
         const miss = missingTables();
         if (miss.length) {
           document.getElementById("wrap").innerHTML =
